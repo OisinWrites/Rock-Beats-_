@@ -20,6 +20,7 @@ h1 {
 nav {
     background-color: #15616D;
     list-style: none;
+    margin-bottom: -1rem;
 }
 .section-links {
     display:flex;
@@ -37,9 +38,19 @@ ul {
     justify-content: space-between;
 }
 /*styling for opening welcome message---*/
-p {
-    font-size: .7rem;
+.welcome {
+    display: flex;
+    flex-direction: row;
 }
+p {
+    max-width: 65vw;
+    font-size: .7rem;
+    font-style: italic;
+}
+h2 {
+    max-width: 30vw;
+    margin: .2rem;
+   }
 /*----styling for player move choice icons----*/
 .button {
     height: auto;
@@ -50,7 +61,6 @@ p {
 }
 /*----styling for the game score counter area----*/
 .counter {
-    display: block;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,3 +69,9 @@ p {
     height:auto;
     width: 30vw;
 }
+.stickman {
+    -webkit-filter: drop-shadow(1px 1px 0 #FFECD1)
+                    drop-shadow(-1px -1px 0 #FFECD1);
+    filter: drop-shadow(1px 1px 0 #FFECD1) 
+            drop-shadow(-1px -1px 0 #FFECD1);
+  }
