@@ -3,23 +3,54 @@ body {
     font-family: 'Silkscreen', cursive;
     color: #001524;
 }
+/*----styling for the site banner title----*/
 header{
     width: 100%;
     background-color: #FFECD1;
     color: #78290F;
     text-align: center;
     font-size: 1rem;
-    margin-bottom: .1rem;
 }
-
+h1 {
+    display:flex;
+    align-items: flex-end;
+    margin-bottom: -.95rem;
+}
+/*----styling for the navigation bar to sections---*/
+nav {
+    background-color: #15616D;
+    list-style: none;
+}
+.section-links {
+    display:flex;
+    flex-direction: row;
+}
+a {
+    color:#FF7D00;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    white-space: nowrap;
+    font-size: .85rem;
+    display: flex;
+    justify-content: space-between;
+}
+/*styling for opening welcome message---*/
+p {
+    font-size: .7rem;
+}
+/*----styling for player move choice icons----*/
 .button {
     height: auto;
-    width: 12vw;
+    width: 10vw;
     background-color: #15616D;
     border-radius: 100%;
     padding: 2vh;
 }
+/*----styling for the game score counter area----*/
 .counter {
+    display: block;
     display: flex;
     flex-direction: row;
     justify-content: center;
