@@ -25,3 +25,8 @@
 - Choices that the computer ties against will have their own seperate counter.
 - Text displaying a win, loss, or tie should appear after each choice is made.
 - This could be followed by a congratulatory, commiserating, or encouraging message.
+
+## Error log
+- Stylesheet having no effect on server output
+- Recreated stylesheet, rewrote link, rewrote ids in css.
+- Resolved finally by add/push/commit/sync

@@ -1,3 +1,30 @@
 body {
-    color: red;
+    background:-webkit-linear-gradient(90deg, rgba(0, 21, 36, 1) 0%, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%);
+    font-family: 'Silkscreen', cursive;
+    color: #001524;
+}
+header{
+    width: 100%;
+    background-color: #FFECD1;
+    color: #78290F;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: .1rem;
+}
+
+.button {
+    height: auto;
+    width: 12vw;
+    background-color: #15616D;
+    border-radius: 100%;
+    padding: 2vh;
+}
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.avatar {
+    height:auto;
+    width: 30vw;
 }
