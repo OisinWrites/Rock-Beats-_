@@ -44,7 +44,6 @@ function makeChoice(choice) {
     const playerWinner = winner(choice, cpuChoice)
     const cpuWinner = winner(cpuChoice, choice)
     addChoiceResult(cpuChoice, cpuWinner)
-    addRelationship()
     addChoiceResult(choice, playerWinner)
 }
 function addChoiceResult(choice, win) {
@@ -53,23 +52,6 @@ function addChoiceResult(choice, win) {
     div.classList.add('record-choice')
     if (win) div.classList.add ('winner')
     recordChart.after(div)
-}
-function addRelationship(winner, loser) {
-    if (winner === 'rock') {
-        if (loser === 'scissors') return 'smashes'
-    }
-    if (winner === 'paper') {
-        
-    }
-    if (winner === 'scissors') {
-        
-    }
-    if (winner === 'lizard') {
-        
-    }
-    if (winner === 'spock') {
-        
-    }
 }
 function randomChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
