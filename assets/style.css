@@ -91,9 +91,10 @@ h2 {
   }
   /*----split----*/
   .players {
-    color:green;
+    color:#15616D;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: space-around;
   }
   /*----split----*/
 .counter {
