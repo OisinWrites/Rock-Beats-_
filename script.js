@@ -1,4 +1,4 @@
-const choices = document.querySelectorAll("[choice]")
+const choices = document.querySelectorAll("[data-choice]")
 const CHOICES = [
     {
         name:'rock',
@@ -26,3 +26,12 @@ const CHOICES = [
         beats:'rock scissors'
     }
 ]
+choices.forEach(button => {
+    button.addEventListener('click', e=> {
+       const choiceName = button.dataset.choice
+       makeChoice(choiceName)
+    })
+})
+function makeChoice(choice) {
+    console.log(choice)
+}
