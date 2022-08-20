@@ -35,8 +35,15 @@ choiceButtons.forEach(choiceButton => {
 })
 function makeChoice(choice) {
     const cpuChoice = randomChoice()
+    const playerWinner = winner(choice, cpuChoice)
+    const cpuWinner = winner(cpuChoice, choice)
+
     console.log(cpuChoice)
 }
 function randomChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
+    return CHOICES[randomIndex]
+}
+function winner(choice, cpuChoice) {
+    return choice.beats === cpuChoice.name
 }

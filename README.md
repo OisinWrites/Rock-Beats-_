@@ -39,4 +39,6 @@
 - Resolution: in event, calling on function 'makeChoice' should have been reapplied
 - to the new const of 'choice' which pulls the data from old const of 'choiceName'
 
-
+- Console log shows that the cpuChoice is not being acknowledged in click event
+- Added return of choices
+- Resolved. console log shows random choice for each click of 'rock'
