@@ -71,10 +71,10 @@ h2 {
     transform: scale(1.3);
 }
 /*----styling for the game score counter area----*/
-.counter {
+.battlefield {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-items: center;
+    align-items:center;
 }
 .avatar {
     height:auto;
@@ -86,3 +86,27 @@ h2 {
     filter: drop-shadow(1px 1px 0 #FFECD1) 
             drop-shadow(-1px -1px 0 #FFECD1);
   }
+  /*----split----*/
+.counter {
+    margin-top: 2rem;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,fr);
+    justify-items: center;
+    align-items:center;
+}
+.record {
+    margin-left: .1rem;
+    font-size: .5rem;
+}
+.record-choice {
+    opacity: .5;
+}
+.record-choice.ties {
+    opacity: .5;
+    font-size: .8rem;
+}
+.record-choice.winner {
+    opacity: 1;
+    font-size: 1.5rem;
+}
