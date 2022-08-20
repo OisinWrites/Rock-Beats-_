@@ -38,16 +38,14 @@ function makeChoice(choice) {
     const cpuChoice = randomChoice()
     const playerWinner = winner(choice, cpuChoice)
     const cpuWinner = winner(cpuChoice, choice)
-
-    addChoiceResult(cpuChoice, cpuWinner)
-    addChoiceResult(choice, playerWinner)
+    console.log(winner)
 }
 function addChoiceResult(choice, win) {
-    const div = document.createElement('div')
-    div.innerText = choice.img
-    div.classList.add('record-choice')
-    if (win) div.classList.add ('winner')
-    recordChart.after(div)
+    const span = document.createElement('span')
+    span.innerText = choice.img
+    span.classList.add('record-choice')
+    if (win) span.classList.add ('winner')
+    recordChart.after(span)
 }
 function randomChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
