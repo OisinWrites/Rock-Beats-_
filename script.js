@@ -4,27 +4,31 @@ const CHOICES = [
     {
         name:'rock',
         img:'rockImg',
-        beats:'scissors lizard'
+        beats:'scissors',
     },
     {
         name:'paper',
         img:"paperImg",
-        beats:'rock spock'
+        beats:'rock', 
+        beats:'spock'
     },
     {
         name:'scissors',
         img:"scissorsImg",
-        beats:'paper lizard'
+        beats:'paper', 
+        beats:'lizard'
     },
     {
         name:'lizard',
         img:'lizardImg',
-        beats:'paper spock'
+        beats:'paper', 
+        beats:'spock'
     },
     {
         name:'spock',
         img:'spockImg',
-        beats:'rock scissors'
+        beats:'rock', 
+        beats:'scissors'
     }
 ]
 choiceButtons.forEach(choiceButton => {
@@ -38,7 +42,8 @@ function makeChoice(choice) {
     const cpuChoice = randomChoice()
     const playerWinner = winner(choice, cpuChoice)
     const cpuWinner = winner(cpuChoice, choice)
-    console.log(winner)
+    addChoiceResult(cpuChoice, cpuWinner)
+    addChoiceResult(choice, playerWinner)
 }
 function addChoiceResult(choice, win) {
     const span = document.createElement('span')
