@@ -1,5 +1,5 @@
 body {
-    background:-webkit-linear-gradient(60deg, rgba(0, 21, 36, 1) 0%, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%) no-repeat;
+    background:-webkit-linear-gradient(120deg, rgba(0, 21, 36, 1) 0%, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%) no-repeat;
     font-family: 'Silkscreen', cursive;
     color: hsl(205, 100%, 7%);
     font-size: 1rem;
@@ -76,8 +76,8 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     align-items:center;
-    margin-top: -3rem;
-    margin-bottom: -3rem;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
 }
 .avatar {
     height:auto;
