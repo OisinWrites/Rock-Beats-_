@@ -33,3 +33,5 @@
 
 - JS not updating changes in browser
 - add/push/commit/sync and restarting python3 -m http.server command not resolving
+- exiting git pod and reloading resolved
+
