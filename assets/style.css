@@ -87,11 +87,16 @@ h2 {
             drop-shadow(-1px -1px 0 #FFECD1);
   }
   /*----split----*/
+  .players {
+    color:green;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  /*----split----*/
 .counter {
     margin-top: 2rem;
     display:grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     align-items:center;
 }
