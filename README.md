@@ -46,3 +46,10 @@
 - Chart with record of past moves not working
 - Saving and restarting
 - Solution found: needed square brackets over html identifier in js script
+
+- Record of choices issues
+ 
+- Rock can't win against second opponent, 'Lizard'.
+- Tried making 2 beats in list. Tried making second rock global element that only beats lizard
+- Going to make beats 2 and treat as beats
+- Resolved, not by treating exactly the same but by use of an 'or' statement, ||, at same place.

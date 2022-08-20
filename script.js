@@ -5,7 +5,7 @@ const CHOICES = [
         name:'rock',
         img:'rockImg',
         beats:'scissors',
-        beats:'lizard'
+        beats2: 'lizard'
     },
     {
         name:'paper',
@@ -58,5 +58,5 @@ function randomChoice() {
     return CHOICES[randomIndex]
 }
 function winner(choice, cpChoice) {
-    return choice.beats === cpChoice.name
+    return choice.beats === cpChoice.name || choice.beats2 === cpChoice.name
 }
