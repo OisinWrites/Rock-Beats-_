@@ -1,10 +1,11 @@
 const choiceButtons = document.querySelectorAll("[data-choice]")
-const recordChart = document.querySelector('record-choices-chart')
+const recordChart = document.querySelector('[record-choices-chart]')
 const CHOICES = [
     {
         name:'rock',
         img:'rockImg',
         beats:'scissors',
+        beats:'lizard'
     },
     {
         name:'paper',
@@ -56,6 +57,6 @@ function randomChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
     return CHOICES[randomIndex]
 }
-function winner(choice, cpuChoice) {
-    return choice.beats === cpuChoice.name
+function winner(choice, cpChoice) {
+    return choice.beats === cpChoice.name
 }

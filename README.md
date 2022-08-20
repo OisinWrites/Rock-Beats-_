@@ -45,3 +45,4 @@
 
 - Chart with record of past moves not working
 - Saving and restarting
+- Solution found: needed square brackets over html identifier in js script
