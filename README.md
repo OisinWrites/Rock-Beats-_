@@ -30,3 +30,6 @@
 - Stylesheet having no effect on server output
 - Recreated stylesheet, rewrote link, rewrote ids in css.
 - Resolved finally by add/push/commit/sync
+
+- JS not updating changes in browser
+- add/push/commit/sync and restarting python3 -m http.server command not resolving
