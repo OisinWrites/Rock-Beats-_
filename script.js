@@ -34,5 +34,9 @@ choiceButtons.forEach(choiceButton => {
     })
 })
 function makeChoice(choice) {
-    console.log(choice)
+    const cpuChoice = randomChoice()
+    console.log(cpuChoice)
+}
+function randomChoice() {
+    const randomIndex = Math.floor(Math.random() * CHOICES.length)
 }
