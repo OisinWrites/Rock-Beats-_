@@ -27,10 +27,10 @@ const CHOICES = [
     }
 ]
 choiceButtons.forEach(choiceButton => {
-    choiceButton.addEventListener('click', e=> {
+    choiceButton.addEventListener(('click'), e => {
        const choiceName = choiceButton.dataset.choice
        const choice = CHOICES.find(choice => choice.name === choiceName)
-       makeChoice(choiceName)
+       makeChoice(choice)
     })
 })
 function makeChoice(choice) {

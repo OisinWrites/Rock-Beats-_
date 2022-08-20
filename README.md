@@ -36,4 +36,7 @@
 - exiting git pod and reloading resolved
 
 - Console log shows that click event not tying into global choice vars
+- Resolution: in event, calling on function 'makeChoice' should have been reapplied
+- to the new const of 'choice' which pulls the data from old const of 'choiceName'
+
 
