@@ -86,6 +86,9 @@ h2 {
     filter: drop-shadow(1px 1px 0 #FFECD1) 
             drop-shadow(-1px -1px 0 #FFECD1);
   }
+  #vs {
+    font-size: 4rem;
+  }
   /*----split----*/
   .players {
     color:green;

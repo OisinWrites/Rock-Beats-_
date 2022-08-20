@@ -3,33 +3,33 @@ const recordChart = document.querySelector('[record-choices-chart]')
 const CHOICES = [
     {
         name:'rock',
-        img:'rockImg',
-        beats:'scissors',
-        beats2: 'lizard'
+        img:'assets/images/rock.png',
+        beats:['scissors', 'lizard'],
+        loses:['paper','spock']
     },
     {
         name:'paper',
         img:"paperImg",
-        beats:'rock', 
-        beats2:'spock'
+        beats:['rock', 'spock'],
+        loses:['scissors', 'lizard']
     },
     {
         name:'scissors',
         img:"scissorsImg",
-        beats:'paper', 
-        beats2:'lizard'
+        beats:['paper','lizard'],
+        loses:['rock', 'spock']
     },
     {
         name:'lizard',
         img:'lizardImg',
-        beats:'paper', 
-        beats2:'spock'
+        beats:['paper', 'spock'],
+        loses:['rock', 'scissors']
     },
     {
         name:'spock',
         img:'spockImg',
-        beats:'rock', 
-        beats2:'scissors'
+        beats:['rock', 'scissors'],
+        loses:['paper','lizard']
     }
 ]
 choiceButtons.forEach(choiceButton => {
