@@ -46,12 +46,14 @@ const CHOICES = [
 ];
 //selecting a choice//
 choiceButtons.forEach(choiceButton => {
-    choiceButton.addEventListener(('click'), e => 
-        choiceButton.name === choiceButton.dataset.choice
+    choiceButton.addEventListener(('click'), e => {
+        const playerChoice = CHOICES.find(choice => 
+            choice.name === choiceButton.dataset.choice
         );
 
         playerPlays(playerChoice);
-})
+    });
+});
 //functions the choice calls on//
 
 //function that give feedback to the user//
