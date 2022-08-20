@@ -44,7 +44,7 @@ function makeChoice(choice) {
     const playerWinner = winner(choice, cpuChoice)
     const cpuWinner = winner(cpuChoice, choice)
     document.getElementById('player-choice').innerHTML = 
-        `<img src="${playerChoice.img}"alt="scissors">`;
+        `<img src="${choice.img}"alt="scissors">`;
     document.getElementById('cpu-choice').innerHTML = 
     `<img src="${cpuChoice.img}"alt="scissors">`;
 }
