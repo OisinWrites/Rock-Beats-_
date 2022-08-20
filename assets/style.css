@@ -1,5 +1,5 @@
 body {
-    background:-webkit-linear-gradient(90deg, rgba(0, 21, 36, 1) 0%, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%);
+    background:-webkit-linear-gradient(60deg, rgba(0, 21, 36, 1) 0%, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%) no-repeat;
     font-family: 'Silkscreen', cursive;
     color: #001524;
 }
@@ -53,16 +53,22 @@ h2 {
     margin: .2rem;
    }
 /*----styling for player move choice icons----*/
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
 .button {
     height: auto;
-    width: 10vw;
+    width: 14vw;
     background-color: #15616D;
     border-radius: 100%;
-    padding: 2vh;
+    padding: 1vw;
     transition: 100ms;
 }
-.buttodn:hover {
-    transform: scale (1.3);
+.button:hover {
+    transform: scale(1.3);
 }
 /*----styling for the game score counter area----*/
 .counter {
