@@ -35,3 +35,5 @@
 - add/push/commit/sync and restarting python3 -m http.server command not resolving
 - exiting git pod and reloading resolved
 
+- Console log shows that click event not tying into global choice vars
+
