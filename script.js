@@ -26,8 +26,7 @@ const CHOICES = [
         beats:'rock scissors'
     }
 ]
-var img = rockImg();
-img.src = "assets/images/rock.png";
+
 var img = paperImg();
 img.src = "assets/images/paper.png";
 var img = scissorsImg();
