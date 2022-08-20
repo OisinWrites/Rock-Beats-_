@@ -25,10 +25,12 @@ nav {
 .section-links {
     display:flex;
     flex-direction: row;
+    margin-right: 1rem;
 }
 a {
     color:#FF7D00;
     text-decoration: none;
+    margin-right: 3rem;
 }
 ul {
     list-style: none;
