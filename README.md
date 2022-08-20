@@ -60,4 +60,4 @@
 - Third issue: record flowing out to right of page endlessly.
 - Changed back to divs and content is going down the page, but need to limit times
 - Also need both choices to appear along side, not one after the other as is happening
-- Now appearing alongside- moved js keyword [record-choices-chart] into last child span of its original div, allowing the div styling to target it as its child.
+- Now appearing alongside- moved js keyword 'record-choices-chart' into last child span of its original div, allowing the div styling to target it as its child.
