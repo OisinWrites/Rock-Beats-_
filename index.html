@@ -37,6 +37,17 @@
             </p>
             <h2>Choose wisely</h2>
         </div>
+        <div class="battlefield">
+            <span name="player">
+                <img class="avatar stickman" src="assets/images/player.png">
+            </span>
+            <span name="vs">
+                <p id="vs">vs</p>
+            </span>
+            <span name="cpu">
+                <img class="avatar cpu" src="assets/images/computer.png">
+            </span>
+        </div>
         <div class="buttons">
             <span class="choices" data-choice="rock">
                 <img class="button" src="assets/images/rock.png" alt="rock">
@@ -54,39 +65,26 @@
                 <img class="button" src="assets/images/spock.png" alt="spock">
             </span>
         </div>
-        <div class="battlefield">
-            <span name="player">
-                <img class="avatar stickman greyscale" src="assets/images/player.png">
-            </span>
-            <span name="vs">
-                <p id="vs">vs</p>
-            </span>
-            <span name="cpu">
-                <img class="avatar" src="assets/images/computer.png">
-            </span>
-        </div>
         <div class="players">
-            <span name="playername">
-                <p>Player 1</p>
-            </span>
-            <span name="ties">
-                <p>ties</p>
-            </span>
-            <span name="cpuname" >
-                <p>Comp</p>
-            </span>
-        </div>
-        <div class="counter">
-            <span class="record" name="playerscore">
+            <p>Player 1<br>
+                <span class="record" name="playerscore">
                 0
-            </span>
-            <span class="record" name="cpuscore">
-                0
-            </span>
+                </span>
+            </p>
+            <p>ties<br>
+                <span class="record" name="cpuscore">
+                    0
+                </span>
+            </p>
+            <p>Comp<br>
+                <span class="record" name="cpuscore" record-choices-chart>
+                    0
+                </span>
+            </p>        
         </div>
-        <div class="record-choice"></div>
+        <!---<div class="record-choice"></div>
         <div class="record-choice ties" ></div>
-        <div class="record-choice winner"></div>
+        <div class="record-choice winner"></div>--->
     </section>
     <!--How to Play, to include basic instructions, any interesting information about the game's origin-->
     <section id="how-to-play">
