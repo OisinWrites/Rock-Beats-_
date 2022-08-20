@@ -53,3 +53,11 @@
 - Tried making 2 beats in list. Tried making second rock global element that only beats lizard
 - Going to make beats 2 and treat as beats
 - Resolved, not by treating exactly the same but by use of an 'or' statement, ||, at same place.
+
+- Second charts issue: computers winning choices aren't showing as having beaten player
+- No idea how this was resolved other than through workshopping the next issue, and it  seems to inadvertently fixed the issue.
+
+- Third issue: record flowing out to right of page endlessly.
+- Changed back to divs and content is going down the page, but need to limit times
+- Also need both choices to appear along side, not one after the other as is happening
+- Now appearing alongside- moved js keyword [record-choices-chart] into last child span of its original div, allowing the div styling to target it as its child.

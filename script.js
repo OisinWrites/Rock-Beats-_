@@ -11,25 +11,25 @@ const CHOICES = [
         name:'paper',
         img:"paperImg",
         beats:'rock', 
-        beats:'spock'
+        beats2:'spock'
     },
     {
         name:'scissors',
         img:"scissorsImg",
         beats:'paper', 
-        beats:'lizard'
+        beats2:'lizard'
     },
     {
         name:'lizard',
         img:'lizardImg',
         beats:'paper', 
-        beats:'spock'
+        beats2:'spock'
     },
     {
         name:'spock',
         img:'spockImg',
         beats:'rock', 
-        beats:'scissors'
+        beats2:'scissors'
     }
 ]
 choiceButtons.forEach(choiceButton => {
@@ -47,11 +47,11 @@ function makeChoice(choice) {
     addChoiceResult(choice, playerWinner)
 }
 function addChoiceResult(choice, win) {
-    const span = document.createElement('span')
-    span.innerText = choice.img
-    span.classList.add('record-choice')
-    if (win) span.classList.add ('winner')
-    recordChart.after(span)
+    const div = document.createElement('div')
+    div.innerText = choice.img
+    div.classList.add('record-choice')
+    if (win) div.classList.add ('winner')
+    recordChart.after(div)
 }
 function randomChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)
