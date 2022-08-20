@@ -1,4 +1,5 @@
 const choiceButtons = document.querySelectorAll("[data-choice]")
+const recordChart = document.querySelector('record-choices-chart')
 const CHOICES = [
     {
         name:'rock',
@@ -38,7 +39,15 @@ function makeChoice(choice) {
     const playerWinner = winner(choice, cpuChoice)
     const cpuWinner = winner(cpuChoice, choice)
 
-    console.log(cpuChoice)
+    addChoiceResult(cpuChoice, cpuWinner)
+    addChoiceResult(choice, playerWinner)
+}
+function addChoiceResult(choice, win) {
+    const div = document.createElement('div')
+    div.innerText = choice.img
+    div.classList.add('record-choice')
+    if (win) div.classList.add ('winner')
+    recordChart.after(div)
 }
 function randomChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length)

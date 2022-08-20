@@ -42,3 +42,6 @@
 - Console log shows that the cpuChoice is not being acknowledged in click event
 - Added return of choices
 - Resolved. console log shows random choice for each click of 'rock'
+
+- Chart with record of past moves not working
+- Saving and restarting
