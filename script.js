@@ -111,7 +111,7 @@ function resetButton() {
     addEventListeners();
 }
 
-function determineWin() {
+function determineWinRock() {
         if(cpuChoice.id === 3 || cpuChoice.id === 4){
             winCounter ++;
             return 'wins against'
@@ -125,7 +125,62 @@ function determineWin() {
             return 'ties with'
         }
 }
-
+function determineWinPaper() {
+    if(cpuChoice.id === 1 || cpuChoice.id === 5){
+        winCounter ++;
+        return 'wins against'
+    }
+    else if(cpuChoice.id === 3 || cpuChoice.id === 4){
+        loseCounter ++;
+        return 'loses to'
+    }
+    else if(cpuChoice.id === 2){
+        tiesCounter ++;
+        return 'ties with'
+    }
+}
+function determineWinScissors() {
+    if(cpuChoice.id === 2 || cpuChoice.id === 4){
+        winCounter ++;
+        return 'wins against'
+    }
+    else if(cpuChoice.id === 1 || cpuChoice.id === 5){
+        loseCounter ++;
+        return 'loses to'
+    }
+    else if(cpuChoice.id === 3){
+        tiesCounter ++;
+        return 'ties with'
+    }
+}
+function determineWinLizard() {
+    if(cpuChoice.id === 2 || cpuChoice.id === 5){
+        winCounter ++;
+        return 'wins against'
+    }
+    else if(cpuChoice.id === 1 || cpuChoice.id === 3){
+        loseCounter ++;
+        return 'loses to'
+    }
+    else if(cpuChoice.id === 4){
+        tiesCounter ++;
+        return 'ties with'
+    }
+}
+function determineWinSpock() {
+    if(cpuChoice.id === 1 || cpuChoice.id === 3){
+        winCounter ++;
+        return 'wins against'
+    }
+    else if(cpuChoice.id === 2 || cpuChoice.id === 4){
+        loseCounter ++;
+        return 'loses to'
+    }
+    else if(cpuChoice.id === 5){
+        tiesCounter ++;
+        return 'ties with'
+    }
+}
 function randomNo(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -140,7 +195,7 @@ function addEventListeners() {
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
-        var result = determineWin();
+        var result = determineWinRock();
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
@@ -154,7 +209,7 @@ function addEventListeners() {
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
-        var result = determineWin();
+        var result = determineWinPaper();
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
@@ -168,7 +223,7 @@ function addEventListeners() {
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
-        var result = determineWin();
+        var result = determineWinScissors();
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
@@ -182,7 +237,7 @@ function addEventListeners() {
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
-        var result = determineWin();
+        var result = determineWinLizard();
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
@@ -196,7 +251,7 @@ function addEventListeners() {
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
-        var result = determineWin();
+        var result = determineWinSpock();
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
