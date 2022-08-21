@@ -140,6 +140,7 @@ function resetButton() {
 </span>`;
     document.getElementById('reset-button').innerHTML = buttonSelections;
     addEventListeners()
+    document.getElementById('actionword').innerHTML = '';
 }
 //below are 5 'determine win for x' functions. The computers options, and the players buttons
 //are each assigned a value between 1-5, inclusively. They are Rock, Paper, Scissors, Lizard, Spock, respectively.
