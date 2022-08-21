@@ -4,11 +4,22 @@ body {
     color: #001524;
     font-size: 1rem;
 }
+@-webkit-keyframes body {
+    0% {
+        background:-webkit-linear-gradient(180deg, #001524 0%, rgba(255, 236, 209, 1) 50%, #001524 99%) no-repeat;
+    }
+    100% {
+        background:-webkit-linear-gradient(180deg, #001524 0%,  rgba(255, 125, 0, 1) 50%, #001524 99%) no-repeat;
+    }
+}
 .bodywin {
     background:-webkit-linear-gradient(270deg, rgba(255, 236, 209, 1) 0%, rgba(255, 125, 0, 1) 99%) no-repeat;
 }
 .bodylose {
     background:-webkit-linear-gradient(180deg, #001524 0%, rgba(255, 236, 209, 1) 50%, #001524 99%) no-repeat;
+    -webkit-animation-name: body;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
 }
 /*----styling for the site banner title----*/
 header{
