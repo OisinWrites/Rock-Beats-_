@@ -62,5 +62,9 @@
 - Also need both choices to appear along side, not one after the other as is happening
 - Now appearing alongside- moved js keyword 'record-choices-chart' into last child span of its original div, allowing the div styling to target it as its child.
 
+- Game ends and restarts on 5th go
+- Shouldn't restart but instead create a restart button, which itself sets counters to 0
+-
+
 ## Credits and Sources
 - StackOverflow. An example of random selection: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript 
