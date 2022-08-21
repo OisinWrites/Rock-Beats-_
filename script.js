@@ -1,21 +1,22 @@
 const rockButton = document.querySelector('[rockButton]');
-   
+var cpuChoice;
+
 rockButton.addEventListener('click', e => {
-        var playerChoice = 1;
-            var result = determineWin();
-                console.log(result)
+    var playerChoice = 1;
+    cpuChoice = randomNo(1, 5);
+    var result = determineWin();
+        console.log(playerChoice, result, cpuChoice)
     })
 
 function determineWin() {
-    const cpuChoice = randomNo(1, 5);
         if(cpuChoice === 3 || cpuChoice === 4){
-            return 'win'
+            return 'wins against'
         }
         else if(cpuChoice === 2 || cpuChoice === 5){
-            return 'lose'
+            return 'loses to'
         }
         else if(cpuChoice === 1){
-            return 'draw'
+            return 'ties with'
         }
 }
 
