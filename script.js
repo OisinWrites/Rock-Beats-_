@@ -1,4 +1,3 @@
-const rockButton = document.querySelector('[rockButton]');
 var cpuChoice;
 var winCounter = 0;
 var tiesCounter = 0;
@@ -54,12 +53,6 @@ function imagesToLog(playerChoice, resultMessage, cpuChoice) {
     <img class="button" src="${cpuChoice.img}" alt="${cpuChoice.name}">
     </span>`;
     document.getElementById('game-log').innerHTML = newHtml + html; 
-    // document.getElementById('player-choice-img').innerHTML=
-    //     `<img class="button" src="${playerChoice.img}" alt="${playerChoice.name}">`
-    // document.getElementById('relationship-message').innerHTML=
-    //     `${resultMessage}`
-    // document.getElementById('computer-choice-img').innerHTML=
-    //     `<img class="button" src="${cpuChoice.img}" alt="${cpuChoice.name}">`
 }
 
 function gameEnd() {
@@ -119,7 +112,6 @@ function resetButton() {
 }
 
 function determineWin() {
-    console.log(cpuChoice);
         if(cpuChoice.id === 3 || cpuChoice.id === 4){
             winCounter ++;
             return 'wins against'
@@ -143,6 +135,62 @@ function addEventListeners() {
         numberClicks ++;
         var playerChoice = selections.find(s => {
             return s.id === 1
+        });
+        var cpuChoiceId = randomNo(1, 5);
+        cpuChoice = selections.find(s => {
+            return s.id === cpuChoiceId
+        });
+        var result = determineWin();
+        gameEnd();
+        countersToScreen();
+        imagesToLog(playerChoice, result, cpuChoice);
+    })
+    document.querySelector('[paperButton]').addEventListener('click', function(){
+        numberClicks ++;
+        var playerChoice = selections.find(s => {
+            return s.id === 2
+        });
+        var cpuChoiceId = randomNo(1, 5);
+        cpuChoice = selections.find(s => {
+            return s.id === cpuChoiceId
+        });
+        var result = determineWin();
+        gameEnd();
+        countersToScreen();
+        imagesToLog(playerChoice, result, cpuChoice);
+    })
+    document.querySelector('[scissorsButton]').addEventListener('click', function(){
+        numberClicks ++;
+        var playerChoice = selections.find(s => {
+            return s.id === 3
+        });
+        var cpuChoiceId = randomNo(1, 5);
+        cpuChoice = selections.find(s => {
+            return s.id === cpuChoiceId
+        });
+        var result = determineWin();
+        gameEnd();
+        countersToScreen();
+        imagesToLog(playerChoice, result, cpuChoice);
+    })
+    document.querySelector('[lizardButton]').addEventListener('click', function(){
+        numberClicks ++;
+        var playerChoice = selections.find(s => {
+            return s.id === 4
+        });
+        var cpuChoiceId = randomNo(1, 5);
+        cpuChoice = selections.find(s => {
+            return s.id === cpuChoiceId
+        });
+        var result = determineWin();
+        gameEnd();
+        countersToScreen();
+        imagesToLog(playerChoice, result, cpuChoice);
+    })
+    document.querySelector('[spockButton]').addEventListener('click', function(){
+        numberClicks ++;
+        var playerChoice = selections.find(s => {
+            return s.id === 5
         });
         var cpuChoiceId = randomNo(1, 5);
         cpuChoice = selections.find(s => {
