@@ -112,6 +112,22 @@ function resetButton() {
     loseCounter = 0;
     tiesCounter = 0;
     numberClicks = 0;
+    const buttonSelections = `<span class="choices" rockButton>
+    <img class="button" src="assets/images/rock.png" alt="rock">
+</span>
+<span class="choices" paperButton>
+    <img class="button" src="assets/images/paper.png" alt="paper">
+</span>
+<span class="choices" scissorsButton>
+    <img class="button" src="assets/images/scissor.png"alt="scissors">
+</span>
+<span class="choices" lizardButton>
+    <img class="button" src="assets/images/lizard.png" alt="lizard">
+</span>
+<span class="choices" spockButton>
+    <img class="button" src="assets/images/spock.png" alt="spock">
+</span>`;
+    document.getElementById('reset-button').innerHTML = buttonSelections;
 }
 
 function determineWin() {
