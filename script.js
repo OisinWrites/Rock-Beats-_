@@ -5,13 +5,27 @@ var tiesCounter = 0;
 var loseCounter = 0;
 var numberClicks = 0;
 
+const selections = [
+    {
+        name: 'lizard',
+        img: 'assets/images/lizard.png',
+        id: 4
+    },
+    {
+        name: 'rock',
+        img: 'assets/images/rock.png',
+        id: 1,
+    },
+];
+
 rockButton.addEventListener('click', e => {
     numberClicks ++;
-    var playerChoice = 1;
-    cpuChoice = randomNo(1, 5);
+    var playerChoice = selections.find(s => {return s.id === 1});
+    cpuChoice = selections.find(s => {return s.id === 4});
     var result = determineWin();
     gameEnd();
     countersToScreen();
+    imagesToLog(playerChoice, result, cpuChoice);
     console.log(playerChoice, result, cpuChoice, winCounter, tiesCounter, loseCounter)
 })
 
@@ -19,6 +33,15 @@ function countersToScreen() {
     document.getElementById('playerscore').innerHTML=winCounter;
     document.getElementById('ties').innerHTML=tiesCounter;
     document.getElementById('cpuscore').innerHTML=loseCounter;
+}
+
+function imagesToLog(playerChoice, resultMessage, cpuChoice) {
+    document.getElementById('player-choice-img').innerHTML=
+        `<img class="button" src="${playerChoice.img}" alt="${playerChoice.name}">`
+    document.getElementById('relationship-message').innerHTML=
+        `${resultMessage}`
+    document.getElementById('computer-choice-img').innerHTML=
+        `<img class="button" src="${cpuChoice.img}" alt="${cpuChoice.name}">`
 }
 
 function gameEnd() {
@@ -35,15 +58,15 @@ function resetButton() {
 }
 
 function determineWin() {
-        if(cpuChoice === 3 || cpuChoice === 4){
+        if(cpuChoice.id === 3 || cpuChoice.id === 4){
             winCounter ++;
             return 'wins against'
         }
-        else if(cpuChoice === 2 || cpuChoice === 5){
+        else if(cpuChoice.id === 2 || cpuChoice.id === 5){
             loseCounter ++;
             return 'loses to'
         }
-        else if(cpuChoice === 1){
+        else if(cpuChoice.id === 1){
             tiesCounter ++;
             return 'ties with'
         }

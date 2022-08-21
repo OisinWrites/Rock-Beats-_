@@ -57,3 +57,8 @@ choiceButtons.forEach(choiceButton => {
 //functions the choice calls on//
 
 //function that give feedback to the user//
+
+winCounter = 0;
+        loseCounter = 0;
+        tiesCounter = 0;
+        numberClicks = 0;
