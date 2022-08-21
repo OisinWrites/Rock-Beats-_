@@ -90,7 +90,7 @@ function gameEnd() {
                     resetButton();
                     countersToScreen();
                 }
-            )
+            );
             body.classList.add('bodywin');
         }
         else if(loseCounter > winCounter) {
@@ -99,7 +99,8 @@ function gameEnd() {
                     resetButton();
                     countersToScreen();
                 }
-            )
+            );
+            body.classList.add('bodylose');
         }
         else {
             document.getElementById('reset-button').innerHTML = tiesReset;
@@ -143,6 +144,7 @@ function resetButton() {
     addEventListeners()
     document.getElementById('actionword').innerHTML = '';
     body.classList.remove('bodywin');
+    body.classList.remove('bodylose');
 }
 //below are 5 'determine win for x' functions. The computers options, and the players buttons
 //are each assigned a value between 1-5, inclusively. They are Rock, Paper, Scissors, Lizard, Spock, respectively.
