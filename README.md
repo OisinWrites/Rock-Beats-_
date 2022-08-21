@@ -64,7 +64,11 @@
 
 - Game ends and restarts on 5th go
 - Shouldn't restart but instead create a restart button, which itself sets counters to 0
--
+- 
+
+- Button clicks caused cpuChoice to select random no 5 times, instead of just
+- random of. thus 5 x 5
+- tidied code within button event
 
 ## Credits and Sources
 - StackOverflow. An example of random selection: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript 
