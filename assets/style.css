@@ -1,8 +1,14 @@
 body {
-    background:-webkit-linear-gradient(180deg, rgba(255, 236, 209, 1) 0%, rgba(255, 125, 0, 1) 99%) no-repeat;
+    background:-webkit-linear-gradient(120deg, #001524 0% ,rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%) no-repeat;
     font-family: 'Silkscreen', cursive;
-    color: hsl(205, 100%, 7%);
+    color: #001524;
     font-size: 1rem;
+}
+.bodywin {
+    background:-webkit-linear-gradient(270deg, rgba(255, 236, 209, 1) 0%, rgba(255, 125, 0, 1) 99%) no-repeat;
+}
+.bodylose {
+    background:-webkit-linear-gradient(180deg, #001524 0%, rgba(255, 236, 209, 1) 50%, #001524 99%) no-repeat;
 }
 /*----styling for the site banner title----*/
 header{
@@ -69,6 +75,7 @@ h2 {
     transition: 100ms;
     display: flex;
     flex-wrap: wrap;
+    margin: 1vw;
 }
 .button:hover {
     transform: scale(1.3);

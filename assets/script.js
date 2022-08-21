@@ -4,7 +4,7 @@ var winCounter = 0;
 var tiesCounter = 0;
 var loseCounter = 0;
 var numberClicks = 0;
-
+const body = document.querySelector('body');
 const selections = [
     {
         name: 'rock',
@@ -91,6 +91,7 @@ function gameEnd() {
                     countersToScreen();
                 }
             )
+            body.classList.add('bodywin');
         }
         else if(loseCounter > winCounter) {
             document.getElementById('reset-button').innerHTML = loseReset;
@@ -141,6 +142,7 @@ function resetButton() {
     document.getElementById('reset-button').innerHTML = buttonSelections;
     addEventListeners()
     document.getElementById('actionword').innerHTML = '';
+    body.classList.remove('bodywin');
 }
 //below are 5 'determine win for x' functions. The computers options, and the players buttons
 //are each assigned a value between 1-5, inclusively. They are Rock, Paper, Scissors, Lizard, Spock, respectively.
