@@ -308,6 +308,8 @@ function addEventListeners() {
 }
 //----------------------------------------------------------//
 //-----additional script beyond the game--------------------//
+
+//Functions to give the action words between winning and losing choices in a div
 function actionwordsRock() {
    if (cpuChoice.id === 1){
     document.getElementById('actionword').innerHTML = 'Rock ties with itself';
