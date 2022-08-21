@@ -257,6 +257,7 @@ function addEventListeners() {
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
+        actionwordsPaper();
     })
     document.querySelector('[scissorsButton]').addEventListener('click', function(){
         numberClicks ++;
@@ -271,6 +272,7 @@ function addEventListeners() {
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
+        actionwordsScissors();
     })
     document.querySelector('[lizardButton]').addEventListener('click', function(){
         numberClicks ++;
@@ -285,6 +287,7 @@ function addEventListeners() {
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
+        actionwordsLizard();
     })
     document.querySelector('[spockButton]').addEventListener('click', function(){
         numberClicks ++;
@@ -299,13 +302,14 @@ function addEventListeners() {
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
+        actionwordsSpock();
     })
 }
 //----------------------------------------------------------//
 //-----additional script beyond the game--------------------//
 function actionwordsRock() {
    if (cpuChoice.id === 1){
-    document.getElementById('actionword').innerHTML = 'Rock ties with Rock';
+    document.getElementById('actionword').innerHTML = 'Rock ties with itself';
    }
    else if (cpuChoice.id === 2){
     document.getElementById('actionword').innerHTML = 'Paper covers Rock';
@@ -320,3 +324,71 @@ function actionwordsRock() {
     document.getElementById('actionword').innerHTML = 'Spock vaporises Rock';
    }
 }
+function actionwordsPaper() {
+    if (cpuChoice.id === 1){
+     document.getElementById('actionword').innerHTML = 'Paper covers Rock';
+    }
+    else if (cpuChoice.id === 2){
+     document.getElementById('actionword').innerHTML = 'Paper ties with itself';
+    }
+    else if (cpuChoice.id === 3){
+     document.getElementById('actionword').innerHTML = 'Scissors cuts Paper';
+    }
+    else if (cpuChoice.id === 4){
+     document.getElementById('actionword').innerHTML = 'Lizard eats Paper';
+    }
+    else if (cpuChoice.id === 5){
+     document.getElementById('actionword').innerHTML = 'Paper disproves Spock';
+    }
+ }
+ function actionwordsScissors() {
+    if (cpuChoice.id === 1){
+     document.getElementById('actionword').innerHTML = 'Rock crushes Scissors';
+    }
+    else if (cpuChoice.id === 2){
+     document.getElementById('actionword').innerHTML = 'Scissors cuts Paper';
+    }
+    else if (cpuChoice.id === 3){
+     document.getElementById('actionword').innerHTML = 'Scissors ties with itself';
+    }
+    else if (cpuChoice.id === 4){
+     document.getElementById('actionword').innerHTML = 'Scissors decapitates Lizard';
+    }
+    else if (cpuChoice.id === 5){
+     document.getElementById('actionword').innerHTML = 'Spock smashes Scissors';
+    }
+ }
+ function actionwordsLizard() {
+    if (cpuChoice.id === 1){
+     document.getElementById('actionword').innerHTML = 'Rock crushes Lizard';
+    }
+    else if (cpuChoice.id === 2){
+     document.getElementById('actionword').innerHTML = 'Lizard eats Paper';
+    }
+    else if (cpuChoice.id === 3){
+     document.getElementById('actionword').innerHTML = 'Scissors decapitates Lizard';
+    }
+    else if (cpuChoice.id === 4){
+     document.getElementById('actionword').innerHTML = 'Lizard ties with itself';
+    }
+    else if (cpuChoice.id === 5){
+     document.getElementById('actionword').innerHTML = 'Lizard poisons Spock';
+    }
+ }
+ function actionwordsSpock() {
+    if (cpuChoice.id === 1){
+     document.getElementById('actionword').innerHTML = 'Spock vaporises Rock';
+    }
+    else if (cpuChoice.id === 2){
+     document.getElementById('actionword').innerHTML = 'Paper disproves Spock';
+    }
+    else if (cpuChoice.id === 3){
+     document.getElementById('actionword').innerHTML = 'Spock smashes Scissors';
+    }
+    else if (cpuChoice.id === 4){
+     document.getElementById('actionword').innerHTML = 'Lizard poisons Spock';
+    }
+    else if (cpuChoice.id === 5){
+     document.getElementById('actionword').innerHTML = 'Spock ties with himself';
+    }
+ }
