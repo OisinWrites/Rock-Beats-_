@@ -61,14 +61,23 @@
 - Changed back to divs and content is going down the page, but need to limit times
 - Also need both choices to appear along side, not one after the other as is happening
 - Now appearing alongside- moved js keyword 'record-choices-chart' into last child span of its original div, allowing the div styling to target it as its child.
+- Continued to not work. Long Fix!
+            JS code replacing innerHTML would replace the inner with new followed by old
+            as one single innerHTML into one singular replaced div.
+            Instead I made 5 divs, stacked from 5 -> 1 with
+            the function imgToLog replacing innerHTML for each based on
+            the numberClicks counter.
+            And then used styling on the same divs the function targets to successfully
+            center content with justify. 
 
 - Game ends and restarts on 5th go
 - Shouldn't restart but instead create a restart button, which itself sets counters to 0
-- 
+- Made the restart button replace the selection moves buttons, and on click, reappear them.
 
 - Button clicks caused cpuChoice to select random no 5 times, instead of just
 - random of. thus 5 x 5
 - tidied code within button event
+
 
 ## Credits and Sources
 - StackOverflow. An example of random selection: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript 

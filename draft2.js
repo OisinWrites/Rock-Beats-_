@@ -62,3 +62,7 @@ winCounter = 0;
         loseCounter = 0;
         tiesCounter = 0;
         numberClicks = 0;
+
+
+        document.getElementById('reset-button').innerHTML = buttonSelections;
+    addEventListeners();

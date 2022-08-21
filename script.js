@@ -1,3 +1,4 @@
+
 var cpuChoice;
 var winCounter = 0;
 var tiesCounter = 0;
@@ -31,30 +32,53 @@ const selections = [
         id: 5,
     },
 ];
-
+//this called on function was necessary 
+//as the elements it targets are replaced and returned
+//by the resetButton function. When originally returned 
+//the querySelectors were not picking up the html ''x'Buttons'.
 addEventListeners();
-
+//this function sends the current 'x'Counter value into the correct HTML location
 function countersToScreen() {
     document.getElementById('playerscore').innerHTML=winCounter;
     document.getElementById('ties').innerHTML=tiesCounter;
     document.getElementById('cpuscore').innerHTML=loseCounter;
 }
-
+//this function is what records the choices made in our best of 3 game into the HTML,
+//which can be as many as 5 'fights', but aren't necessary to complete in 5 as 
+//the function resetButton restores the innerHTML to empty and their trigger,
+//the clickCounter to 0.
 function imagesToLog(playerChoice, resultMessage, cpuChoice) {
-    var html = document.getElementById('game-log').innerHTML;
-    var newHtml = 
-    `<span id="player-choice-img">
-    <img class="button" src="${playerChoice.img}" alt="${playerChoice.name}">
+    var innerlogs = `<span class="logspan" id="player-choice-img">
+    <img class="logimgs" src="${playerChoice.img}" alt="${playerChoice.name}">
     </span>
-    <span id="relationship-message">
+    <span class="logspan" id="relationship-message">
     ${resultMessage}
     </span>
-    <span id="computer-choice-img" >
-    <img class="button" src="${cpuChoice.img}" alt="${cpuChoice.name}">
+    <span class="logspan" id="computer-choice-img" >
+    <img class="logimgs" src="${cpuChoice.img}" alt="${cpuChoice.name}">
     </span>`;
-    document.getElementById('game-log').innerHTML = newHtml + html; 
+    if (numberClicks === 1) {
+        document.getElementById('fight1').innerHTML = innerlogs
+    }
+    else if(numberClicks === 2) {
+        document.getElementById('fight2').innerHTML = innerlogs        
+    }
+    else if(numberClicks === 3) {
+        document.getElementById('fight3').innerHTML = innerlogs        
+    }
+    else if(numberClicks === 4) {
+        document.getElementById('fight4').innerHTML = innerlogs        
+    }
+    else if(numberClicks === 5) {
+        document.getElementById('fight5').innerHTML = innerlogs
+    }
 }
-
+//this function uses the 'x'Counters to establish if the game is over by checking
+//whether either the win or lose Counters reach 3 in a our best of 3 game, or
+//the alternative: 5 clicks, 5 fights, have occured, which covers game end conditions
+//that include ties. It also tells if no win or lose condition is met then the game is tied.
+//When any of the conditions are met it will call on our resetButton function, and on
+//our countersToScreen function so that the reset to 0 counters will refresh.
 function gameEnd() {
     const winReset = '<div id="resetButton" class="button">Congratulations<br>reset</div>';
     const tiesReset = '<div id="resetButton" class="button">Try Again<br>reset</div>';
@@ -86,12 +110,19 @@ function gameEnd() {
         }
     }
 }
-
+//This is our resetButton. It appears when the gameEnd function is trigger by end game conditions.
+//It resets both the counters of scores, and the log of moves made. It also replaces itself with the
+//original button selection of player moves.
 function resetButton() {
     winCounter = 0;
     loseCounter = 0;
     tiesCounter = 0;
     numberClicks = 0;
+    document.getElementById('fight1').innerHTML = ""
+    document.getElementById('fight2').innerHTML = ""
+    document.getElementById('fight3').innerHTML = ""
+    document.getElementById('fight4').innerHTML = ""
+    document.getElementById('fight5').innerHTML = ""
     const buttonSelections = `<span class="choices" rockButton>
     <img class="button" src="assets/images/rock.png" alt="rock">
 </span>
@@ -107,10 +138,12 @@ function resetButton() {
 <span class="choices" spockButton>
     <img class="button" src="assets/images/spock.png" alt="spock">
 </span>`;
-    document.getElementById('reset-button').innerHTML = buttonSelections;
-    addEventListeners();
 }
-
+//below are 5 'determine win for x' functions. The computers options, and the players buttons
+//are each assigned a value between 1-5, inclusively. They are Rock, Paper, Scissors, Lizard, Spock, respectively.
+//there is a function for each player button, with responses to the numberical values of RPSLS that is beats, loses, or ties.
+//The responses to any pairing are to increment the correct counter up +1, and to return the appropriate message of the 
+//relationship between choices, eg:'wins against'.
 function determineWinRock() {
         if(cpuChoice.id === 3 || cpuChoice.id === 4){
             winCounter ++;
@@ -181,10 +214,18 @@ function determineWinSpock() {
         return 'ties with'
     }
 }
+//this small function is the adjustable code for random number generation. It could be adjusted by changing
+//the arguments passed through its open brackets on its calling. It doesn't need to be adjustable, as we are
+//only dealing with 5 possible choices, but nonetheless, I'm acknowledging that it is so, and I haven't
+//elected to make it otherwise.
 function randomNo(min, max) {  
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
+//this is it, the main event. These event listeners are the crux of the game and the main input the players have.
+//Each of the event listeners are laid out the same, but for each create a static choice of the numberical value
+//associated with whichever RPSLS button was clicked. The functions find within the const 'selection' at the top of the 
+//page the corresponding object and its arrays, so that each button can be associated with its RPSLS choice and image.
+//The click event calls on the other functions above.
 function addEventListeners() {
     document.querySelector('[rockButton]').addEventListener('click', function(){
         numberClicks ++;
