@@ -399,3 +399,11 @@ function actionwordsPaper() {
      document.getElementById('actionword').innerHTML = 'Spock ties with himself';
     }
  }
+ //On click 'player one' should become a form, the submission needs to be taken in by js
+ var nameSubmission = document.getElementById('username');
+ var putformhere = document.getElementById('putformhere');
+ 
+ nameSubmission.addEventListener('click', function() {
+    nameSubmission.innerHTML = '';
+    putformhere.innerHTML = '<input type="text" name="player 1" placeholder="Enter your name, mortal!">'
+ })

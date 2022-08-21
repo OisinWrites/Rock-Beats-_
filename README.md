@@ -78,6 +78,11 @@
 - random of. thus 5 x 5
 - tidied code within button event
 
+- Changing Player 1 to a form on click is only allowed input into form with permanent click.
+- Perhaps clicking into form to use it is creating a new form each time.
+- This was part of the issue and to circumvent it, one div has a click event
+- which changes a different div below that has no event listener.
+
 
 ## Credits and Sources
 - StackOverflow. An example of random selection: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript 
