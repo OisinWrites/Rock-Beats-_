@@ -33,20 +33,7 @@ const selections = [
     },
 ];
 
-rockButton.addEventListener('click', function(){
-    numberClicks ++;
-    var playerChoice = selections.find(s => {
-        return s.id === 1
-    });
-    var cpuChoiceId = randomNo(1, 5);
-    cpuChoice = selections.find(s => {
-        return s.id === cpuChoiceId
-    });
-    var result = determineWin();
-    gameEnd();
-    countersToScreen();
-    imagesToLog(playerChoice, result, cpuChoice);
-})
+addEventListeners();
 
 function countersToScreen() {
     document.getElementById('playerscore').innerHTML=winCounter;
@@ -128,6 +115,7 @@ function resetButton() {
     <img class="button" src="assets/images/spock.png" alt="spock">
 </span>`;
     document.getElementById('reset-button').innerHTML = buttonSelections;
+    addEventListeners();
 }
 
 function determineWin() {
@@ -150,3 +138,19 @@ function randomNo(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function addEventListeners() {
+    document.querySelector('[rockButton]').addEventListener('click', function(){
+        numberClicks ++;
+        var playerChoice = selections.find(s => {
+            return s.id === 1
+        });
+        var cpuChoiceId = randomNo(1, 5);
+        cpuChoice = selections.find(s => {
+            return s.id === cpuChoiceId
+        });
+        var result = determineWin();
+        gameEnd();
+        countersToScreen();
+        imagesToLog(playerChoice, result, cpuChoice);
+    })
+}
