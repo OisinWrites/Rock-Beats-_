@@ -1,4 +1,4 @@
-
+var playerChoice;
 var cpuChoice;
 var winCounter = 0;
 var tiesCounter = 0;
@@ -138,6 +138,8 @@ function resetButton() {
 <span class="choices" spockButton>
     <img class="button" src="assets/images/spock.png" alt="spock">
 </span>`;
+    document.getElementById('reset-button').innerHTML = buttonSelections;
+    addEventListeners()
 }
 //below are 5 'determine win for x' functions. The computers options, and the players buttons
 //are each assigned a value between 1-5, inclusively. They are Rock, Paper, Scissors, Lizard, Spock, respectively.
@@ -240,6 +242,7 @@ function addEventListeners() {
         gameEnd();
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
+        actionwordsRock();
     })
     document.querySelector('[paperButton]').addEventListener('click', function(){
         numberClicks ++;
@@ -297,4 +300,23 @@ function addEventListeners() {
         countersToScreen();
         imagesToLog(playerChoice, result, cpuChoice);
     })
+}
+//----------------------------------------------------------//
+//-----additional script beyond the game--------------------//
+function actionwordsRock() {
+   if (cpuChoice.id === 1){
+    document.getElementById('actionword').innerHTML = 'Rock ties with Rock';
+   }
+   else if (cpuChoice.id === 2){
+    document.getElementById('actionword').innerHTML = 'Paper covers Rock';
+   }
+   else if (cpuChoice.id === 3){
+    document.getElementById('actionword').innerHTML = 'Rock crushes Scissors';
+   }
+   else if (cpuChoice.id === 4){
+    document.getElementById('actionword').innerHTML = 'Rock crushes Lizard';
+   }
+   else if (cpuChoice.id === 5){
+    document.getElementById('actionword').innerHTML = 'Spock vaporises Rock';
+   }
 }
