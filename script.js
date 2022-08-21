@@ -82,25 +82,25 @@ function gameEnd() {
     if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
         if(winCounter > loseCounter) {
             document.getElementById('reset-button').innerHTML = winReset;
-            document.getElementById('reset-button').addEventListener(
-                'click', function() {
+            document.getElementById('resetButton').addEventListener('click', function(){
                     resetButton();
+                    countersToScreen();
                 }
             )
         }
         else if(loseCounter > winCounter) {
             document.getElementById('reset-button').innerHTML = loseReset;
-            document.getElementById('reset-button').addEventListener(
-                'click', function() {
+            document.getElementById('resetButton').addEventListener('click', function() {
                     resetButton();
+                    countersToScreen();
                 }
             )
         }
         else {
             document.getElementById('reset-button').innerHTML = tiesReset;
-            document.getElementById('reset-button').addEventListener(
-                'click', function() {
+            document.getElementById('resetButton').addEventListener('click', function() {
                     resetButton();
+                    countersToScreen();
                 }
             )
         }
