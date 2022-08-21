@@ -1,11 +1,8 @@
-bddody {
-    background:-webkit-linear-gradient(120deg, rgba(0, 21, 36, 1) 0%, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%) no-repeat;
+body {
+    background:-webkit-linear-gradient(180deg, rgba(255, 236, 209, 1) 0%, rgba(255, 125, 0, 1) 99%) no-repeat;
     font-family: 'Silkscreen', cursive;
     color: hsl(205, 100%, 7%);
     font-size: 1rem;
-}
-body {
-    background:-webkit-linear-gradient(120deg, rgba(255, 236, 209, 1) 50%, rgba(255, 125, 0, 1) 99%) no-repeat;
 }
 /*----styling for the site banner title----*/
 header{
