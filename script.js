@@ -33,7 +33,7 @@ const selections = [
     },
 ];
 
-rockButton.addEventListener('click', e => {
+rockButton.addEventListener('click', function(){
     numberClicks ++;
     var playerChoice = selections.find(s => {
         return s.id === 1
@@ -76,8 +76,34 @@ function imagesToLog(playerChoice, resultMessage, cpuChoice) {
 }
 
 function gameEnd() {
+    const winReset = '<div id="resetButton" class="button">Congratulations<br>reset</div>';
+    const tiesReset = '<div id="resetButton" class="button">Try Again<br>reset</div>';
+    const loseReset = '<div id="resetButton" class="button">You Fool<br>reset</div>';
     if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
-        
+        if(winCounter > loseCounter) {
+            document.getElementById('reset-button').innerHTML = winReset;
+            document.getElementById('reset-button').addEventListener(
+                'click', function() {
+                    resetButton();
+                }
+            )
+        }
+        else if(loseCounter > winCounter) {
+            document.getElementById('reset-button').innerHTML = loseReset;
+            document.getElementById('reset-button').addEventListener(
+                'click', function() {
+                    resetButton();
+                }
+            )
+        }
+        else {
+            document.getElementById('reset-button').innerHTML = tiesReset;
+            document.getElementById('reset-button').addEventListener(
+                'click', function() {
+                    resetButton();
+                }
+            )
+        }
     }
 }
 
