@@ -54,12 +54,7 @@ h2 {
     margin: .2rem;
    }
 /*----styling for player move choice icons----*/
-.buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
+
 .button {
     height: auto;
     width: 14vw;
@@ -67,6 +62,8 @@ h2 {
     border-radius: 100%;
     padding: 1vw;
     transition: 100ms;
+    display: flex;
+    flex-wrap: wrap;
 }
 .button:hover {
     transform: scale(1.3);
