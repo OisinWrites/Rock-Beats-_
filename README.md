@@ -86,6 +86,11 @@
 - Trying to create a form that saves its input to a var. After countless attempts
 - I've found the correct method. Documented below.
 
+### Errors Remaining
+- input form for player name is too long and needs to be shortened, I believe it can
+- be achieved with bootstrap. It is being left as is for submission.`
+- Best of five paragraph not returning on reset
+
 ## Credits and Sources
 - StackOverflow. An example of random selection: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript 
 - Coolers. Colour palette generator. https://coolors.co/palette/001524-15616d-ffecd1-ff7d00-78290f

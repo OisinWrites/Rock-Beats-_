@@ -122,6 +122,7 @@ function resetButton() {
     loseCounter = 0;
     tiesCounter = 0;
     numberClicks = 0;
+    document.getElementById('actionword').innerHTML = `"<p class="best">Best of Five</p>"`;
     document.getElementById('fight1').innerHTML = "";
     document.getElementById('fight2').innerHTML = "";
     document.getElementById('fight3').innerHTML = "";
@@ -453,7 +454,14 @@ function onSubmit() {
     playerName = document.getElementById('player-name').value;
     putformhere.innerHTML = "";
     titleGenerator();
-    putplayernamehere.innerHTML = playerName + randomTitle
+    //not yet working
+    if (playerName === undefined){
+        putplayernamehere.innerHTML = 'Numbskull' + randomTitle;
+    }
+    //
+    else {
+        putplayernamehere.innerHTML = playerName + randomTitle;
+    };
  }
 function titleGenerator() {
     if (titleNo === 1){
@@ -490,7 +498,7 @@ function titleGenerator() {
 
 function userNameBanner(){
     if (playerName === undefined){
-        document.getElementById('banner').innerHTML = 'Rock Beats You'
+        document.getElementById('banner').innerHTML = 'Rock Beats You';
     }
     else {
         document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;

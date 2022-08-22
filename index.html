@@ -41,6 +41,40 @@
                 <img class="avatar cpu" src="assets/images/computer.png">
             </span>
         </div>
+        <div class="innerdiv relfive" id="actionword">
+            <p class="best">Best of Five</p>
+        </div>
+        
+        <div class="players">
+            <div class="scoreandname">
+                <span class="record" id="playerscore">
+                    0
+                </span>
+                <div id="username">
+                    <p class="names">
+                        who are you?
+                    </p>
+                </div>
+                <div id="putformhere"></div>
+                <div id="putplayernamehere"></div>
+            </div>
+            <div class="scoreandname">
+                <span class="record" id="ties">
+                    0
+                </span>
+                <p class="names">
+                    ties
+                </p>
+            </div>
+            <div class="scoreandname">
+                <span class="record" id="cpuscore">
+                    0
+                </span>
+                <p class="names">
+                    Cpu
+                </p>
+            </div>        
+        </div>
         <div class="buttons" id="reset-button">
             <span class="choices" rockButton>
                 <img class="button" src="assets/images/rock.png" alt="rock">
@@ -58,39 +92,8 @@
                 <img class="button" src="assets/images/spock.png" alt="spock">
             </span>
         </div>
-        <div class="players">
-            <div>
-                <div id="username">
-                    <p>
-                        Player 1
-                    </p>
-                </div>
-                <div id="putformhere"></div>
-                <div id="putplayernamehere"></div>
-                <span class="record" id="playerscore">
-                    0
-                </span>
-            </div>
-            <div>
-                <p>
-                    ties
-                </p>
-                <span class="record" id="ties">
-                    0
-                </span>
-            </div>
-            <div>
-                <p>
-                    Comp
-                </p>
-                <span class="record" id="cpuscore">
-                    0
-                </span>
-            </div>        
-        </div>
+        <div class="buttonsbarrier"></div>
         <div id="game-log" class="log">
-            <div class="innerdiv" id="actionword">
-            </div>
             <div class="innerdiv" id="fight5">
             </div>
             <div class="innerdiv" id="fight4">
@@ -109,12 +112,12 @@
     <!--How to Play, to include basic instructions, any interesting information about the game's origin-->
     <section id="how-to-play">
         <div class="welcome">
+            <h2  id="wisely-ier">Choose wisely</h2>
             <p>
                 <strong>Only with formidable intellect can you hope
                     to beat the thoughtlessly random selection
                     of the <em>CPU</em></strong>
             </p>
-            <h2  id="wisely-ier">Choose wisely</h2>
         </div>
         <div>
             <img src="assets/images/howtoplay.png" alt="game-instructions">
