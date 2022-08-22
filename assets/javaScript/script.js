@@ -348,7 +348,7 @@ function actionwordsPaper() {
      document.getElementById('actionword').innerHTML = 'Paper disproves Spock';
     }
  }
- function actionwordsScissors() {
+function actionwordsScissors() {
     if (cpuChoice.id === 1){
      document.getElementById('actionword').innerHTML = 'Rock crushes Scissors';
     }
@@ -365,7 +365,7 @@ function actionwordsPaper() {
      document.getElementById('actionword').innerHTML = 'Spock smashes Scissors';
     }
  }
- function actionwordsLizard() {
+function actionwordsLizard() {
     if (cpuChoice.id === 1){
      document.getElementById('actionword').innerHTML = 'Rock crushes Lizard';
     }
@@ -382,7 +382,7 @@ function actionwordsPaper() {
      document.getElementById('actionword').innerHTML = 'Lizard poisons Spock';
     }
  }
- function actionwordsSpock() {
+function actionwordsSpock() {
     if (cpuChoice.id === 1){
      document.getElementById('actionword').innerHTML = 'Spock vaporises Rock';
     }
@@ -400,54 +400,55 @@ function actionwordsPaper() {
     }
  }
  //On click 'player one' should become a form, the submission needs to be taken in by js
- var nameSubmission = document.getElementById('username');
- var putformhere = document.getElementById('putformhere');
+var nameSubmission = document.getElementById('username');
+var putformhere = document.getElementById('putformhere');
+var putplayernamehere = document.getElementById('putplayernamehere');
+var randomTitle;
+var titleNo = randomNo(1,10);
 
- function onSubmit() {
+nameSubmission.addEventListener('click', function() {
+    nameSubmission.innerHTML = '';
+    putformhere.innerHTML = '<form id="player-name-form"><input type="text" name="nickname" placeholder="Your name, mortal!" id="player-name"><input type="button" name="submit" onclick="onSubmit()" value="submit"></form>';
+})
+
+function onSubmit() {
     var playerName = document.getElementById('player-name').value;
     console.log(playerName);
+    putformhere.innerHTML = "";
+    titleGenerator();
+    putplayernamehere.innerHTML = playerName + randomTitle
+
  }
- //nameSubmission.addEventListener('click', function() {
-    //nameSubmission.innerHTML = '';
-    //putformhere.innerHTML = '<form id="myForm"><input type="text" id="commentarea" name="player 1" placeholder="Enter your name, mortal!" onsubmit="validateForm()"></form>';
-    //document.getElementById("myForm").addEventListener('keypress', function(){
-       // if ('keycode' == 13){
-        //    validateForm();
-       // }
-   // })
-//})
-// function conor() {
-//     var oisin = document.getElementById('myForm').value;
-//     console.log(oisin);
-// }
-// function validateForm() {
-//     var input = document.getElementById("userInput");
-//     alert(input);
-//     console.log(input);
-//     }
-    // var x = document.forms['myForm'].value;
-    // if (x == "") {
-    //   alert("Name must be filled out");
-    //   return false;
-    // };
-    // document.getElementById('myForm').innerHTML = x;
-    // console.log(x);
-
-
-//function replaceFormWithName() {
-
-
-// function activateForm() {
-//     document.getElementById('commentarea').addEventListener('keydown', function() {
-//         if ('keydown' == 13) {
-//             this.form.submit();
-//             'keydown'.preventDefault();
-//         };
-//     })    
-// }
-// function getName() {
-//     var userName = document.getElementById('commentarea');
-//     alert(input);
-//     console.log(userName);
-// }
+function titleGenerator() {
+    if (titleNo === 1){
+        randomTitle = ', the Oblivious'
+    }
+    else if (titleNo === 2){
+        randomTitle = ', the Undecided!'
+    }
+    else if (titleNo === 3){
+        randomTitle = ', the Bored...'
+    }
+    else if (titleNo === 4){
+        randomTitle = ', the Confident!'
+    }
+    else if (titleNo === 5){
+        randomTitle = ', the Clairvoyant'
+    }
+    else if (titleNo === 6){
+        randomTitle = ', the Quick-Handed'
+    }
+    else if (titleNo === 7){
+        randomTitle = ', "the long lived, and prosperous"'
+    }
+    else if (titleNo === 8){
+        randomTitle = ', the "not particularly busy"'
+    }
+    else if (titleNo === 9){
+        randomTitle = ', "I wouldnt normally leave anything to chance" O Brien '
+    }
+    else if (titleNo === 10){
+        randomTitle = ', lady lucks Swindler'
+    }
+}
 
