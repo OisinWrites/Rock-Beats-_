@@ -85,6 +85,7 @@ function gameEnd() {
     const loseReset = '<div id="resetButton" class="button">You Fool<br>reset</div>';
     if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
         if(winCounter > loseCounter) {
+            document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/victory.png">';
             document.getElementById('reset-button').innerHTML = winReset;
             document.getElementById('resetButton').addEventListener('click', function(){
                     resetButton();
@@ -505,7 +506,4 @@ function chooseMoreWiselyAgain(){
     if (numberClicks === 2 && loseCounter === 2){
         document.getElementById('wisely-ier').innerHTML = 'Choose even more wisely-ier still'
     } 
-}
-function defeat(){
-    document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/defeat.png">'
 }
