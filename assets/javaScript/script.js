@@ -275,7 +275,7 @@ function addEventListeners() {
         var playerChoice = selections.find(s => {
             return s.id === 3
         });
-        var cpuChoiceId = randomNo(1, 5);
+        var cpuChoiceId = randomNo(1, 1);
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
@@ -459,6 +459,11 @@ function titleGenerator() {
 }
 
 function userNameBanner(){
-    document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;
+    if (playerName === undefined){
+        document.getElementById('banner').innerHTML = 'Rock Beats You'
+    }
+    else {
+        document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;
+    }
     h1.classList.add('bannerwithname');
 }
