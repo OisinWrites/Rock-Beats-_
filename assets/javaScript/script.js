@@ -402,8 +402,44 @@ function actionwordsPaper() {
  //On click 'player one' should become a form, the submission needs to be taken in by js
  var nameSubmission = document.getElementById('username');
  var putformhere = document.getElementById('putformhere');
- 
- nameSubmission.addEventListener('click', function() {
-    nameSubmission.innerHTML = '';
-    putformhere.innerHTML = '<input type="text" name="player 1" placeholder="Enter your name, mortal!">'
- })
+
+ //nameSubmission.addEventListener('click', function() {
+    //nameSubmission.innerHTML = '';
+    //putformhere.innerHTML = '<form id="myForm"><input type="text" id="commentarea" name="player 1" placeholder="Enter your name, mortal!" onsubmit="validateForm()"></form>';
+    //document.getElementById("myForm").addEventListener('keypress', function(){
+       // if ('keycode' == 13){
+        //    validateForm();
+       // }
+   // })
+//})
+function validateForm() {
+    var input = document.getElementById("userInput");
+    alert(input);
+    console.log(input);
+    }
+    // var x = document.forms['myForm'].value;
+    // if (x == "") {
+    //   alert("Name must be filled out");
+    //   return false;
+    // };
+    // document.getElementById('myForm').innerHTML = x;
+    // console.log(x);
+
+
+//function replaceFormWithName() {
+
+
+// function activateForm() {
+//     document.getElementById('commentarea').addEventListener('keydown', function() {
+//         if ('keydown' == 13) {
+//             this.form.submit();
+//             'keydown'.preventDefault();
+//         };
+//     })    
+// }
+// function getName() {
+//     var userName = document.getElementById('commentarea');
+//     alert(input);
+//     console.log(userName);
+// }
+
