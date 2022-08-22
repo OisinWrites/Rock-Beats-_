@@ -186,6 +186,9 @@ function determineWinScissors() {
     }
     else if(cpuChoice.id === 1 || cpuChoice.id === 5){
         loseCounter ++;
+        if(cpuChoice.id === 1){
+            userNameBanner()
+        };
         return 'loses to'
     }
     else if(cpuChoice.id === 3){
@@ -200,6 +203,9 @@ function determineWinLizard() {
     }
     else if(cpuChoice.id === 1 || cpuChoice.id === 3){
         loseCounter ++;
+        if(cpuChoice.id === 1){
+            userNameBanner()
+        };
         return 'loses to'
     }
     else if(cpuChoice.id === 4){
@@ -405,6 +411,8 @@ var putformhere = document.getElementById('putformhere');
 var putplayernamehere = document.getElementById('putplayernamehere');
 var randomTitle;
 var titleNo = randomNo(1,10);
+var playerName;
+const  h1 = document.querySelector('h1');
 
 nameSubmission.addEventListener('click', function() {
     nameSubmission.innerHTML = '';
@@ -412,12 +420,10 @@ nameSubmission.addEventListener('click', function() {
 })
 
 function onSubmit() {
-    var playerName = document.getElementById('player-name').value;
-    console.log(playerName);
+    playerName = document.getElementById('player-name').value;
     putformhere.innerHTML = "";
     titleGenerator();
     putplayernamehere.innerHTML = playerName + randomTitle
-
  }
 function titleGenerator() {
     if (titleNo === 1){
@@ -452,3 +458,7 @@ function titleGenerator() {
     }
 }
 
+function userNameBanner(){
+    document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;
+    h1.classList.add('bannerwithname');
+}

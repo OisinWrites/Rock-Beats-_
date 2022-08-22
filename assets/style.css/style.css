@@ -34,6 +34,9 @@ h1 {
     align-items: flex-end;
     margin-bottom: -.95rem;
 }
+.bannerwithname {
+    
+}
 /*----styling for the navigation bar to sections---*/
 nav {
     background-color: #15616D;
