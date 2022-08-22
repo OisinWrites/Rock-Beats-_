@@ -94,6 +94,7 @@ function gameEnd() {
             body.classList.add('bodywin');
         }
         else if(loseCounter > winCounter) {
+            document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/defeat.png">';
             document.getElementById('reset-button').innerHTML = loseReset;
             document.getElementById('resetButton').addEventListener('click', function() {
                     resetButton();
@@ -120,11 +121,12 @@ function resetButton() {
     loseCounter = 0;
     tiesCounter = 0;
     numberClicks = 0;
-    document.getElementById('fight1').innerHTML = ""
-    document.getElementById('fight2').innerHTML = ""
-    document.getElementById('fight3').innerHTML = ""
-    document.getElementById('fight4').innerHTML = ""
-    document.getElementById('fight5').innerHTML = ""
+    document.getElementById('fight1').innerHTML = "";
+    document.getElementById('fight2').innerHTML = "";
+    document.getElementById('fight3').innerHTML = "";
+    document.getElementById('fight4').innerHTML = "";
+    document.getElementById('fight5').innerHTML = "";
+    document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/player.png">'
     const buttonSelections = `<span class="choices" rockButton>
     <img class="button" src="assets/images/rock.png" alt="rock">
 </span>
@@ -434,6 +436,11 @@ var putplayernamehere = document.getElementById('putplayernamehere');
 var randomTitle;
 var titleNo = randomNo(1,10);
 var playerName;
+const playerDefeat = [
+    {
+    img: 'assets/images/defeat.png'
+    }
+]
 const  h1 = document.querySelector('h1');
 
 nameSubmission.addEventListener('click', function() {
@@ -498,4 +505,7 @@ function chooseMoreWiselyAgain(){
     if (numberClicks === 2 && loseCounter === 2){
         document.getElementById('wisely-ier').innerHTML = 'Choose even more wisely-ier still'
     } 
+}
+function defeat(){
+    document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/defeat.png">'
 }
