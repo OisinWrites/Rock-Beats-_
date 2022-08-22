@@ -151,13 +151,19 @@ function resetButton() {
 //there is a function for each player button, with responses to the numberical values of RPSLS that is beats, loses, or ties.
 //The responses to any pairing are to increment the correct counter up +1, and to return the appropriate message of the 
 //relationship between choices, eg:'wins against'.
+
+//first function on each is to reset the banner which an addition function changes later
 function determineWinRock() {
+    document.getElementById('banner').innerHTML = 'Rock Beats _';
+    document.getElementById('wisely-ier').innerHTML = 'Choose Wisely';
         if(cpuChoice.id === 3 || cpuChoice.id === 4){
             winCounter ++;
             return 'wins against'
         }
         else if(cpuChoice.id === 2 || cpuChoice.id === 5){
             loseCounter ++;
+            chooseMoreWisely();
+            chooseMoreWiselyAgain();
             return 'loses to'
         }
         else if(cpuChoice.id === 1){
@@ -166,12 +172,16 @@ function determineWinRock() {
         }
 }
 function determineWinPaper() {
+    document.getElementById('banner').innerHTML = 'Rock Beats _';
+    document.getElementById('wisely-ier').innerHTML = 'Choose Wisely';
     if(cpuChoice.id === 1 || cpuChoice.id === 5){
         winCounter ++;
         return 'wins against'
     }
     else if(cpuChoice.id === 3 || cpuChoice.id === 4){
         loseCounter ++;
+        chooseMoreWisely();
+        chooseMoreWiselyAgain();
         return 'loses to'
     }
     else if(cpuChoice.id === 2){
@@ -180,6 +190,8 @@ function determineWinPaper() {
     }
 }
 function determineWinScissors() {
+    document.getElementById('banner').innerHTML = 'Rock Beats _';
+    document.getElementById('wisely-ier').innerHTML = 'Choose Wisely';
     if(cpuChoice.id === 2 || cpuChoice.id === 4){
         winCounter ++;
         return 'wins against'
@@ -189,6 +201,8 @@ function determineWinScissors() {
         if(cpuChoice.id === 1){
             userNameBanner()
         };
+        chooseMoreWisely();
+        chooseMoreWiselyAgain();
         return 'loses to'
     }
     else if(cpuChoice.id === 3){
@@ -197,6 +211,8 @@ function determineWinScissors() {
     }
 }
 function determineWinLizard() {
+    document.getElementById('banner').innerHTML = 'Rock Beats _';
+    document.getElementById('wisely-ier').innerHTML = 'Choose Wisely';
     if(cpuChoice.id === 2 || cpuChoice.id === 5){
         winCounter ++;
         return 'wins against'
@@ -206,6 +222,8 @@ function determineWinLizard() {
         if(cpuChoice.id === 1){
             userNameBanner()
         };
+        chooseMoreWisely();
+        chooseMoreWiselyAgain();
         return 'loses to'
     }
     else if(cpuChoice.id === 4){
@@ -214,12 +232,16 @@ function determineWinLizard() {
     }
 }
 function determineWinSpock() {
+    document.getElementById('banner').innerHTML = 'Rock Beats _';
+    document.getElementById('wisely-ier').innerHTML = 'Choose Wisely';
     if(cpuChoice.id === 1 || cpuChoice.id === 3){
         winCounter ++;
         return 'wins against'
     }
     else if(cpuChoice.id === 2 || cpuChoice.id === 4){
         loseCounter ++;
+        chooseMoreWisely();
+        chooseMoreWiselyAgain();
         return 'loses to'
     }
     else if(cpuChoice.id === 5){
@@ -275,7 +297,7 @@ function addEventListeners() {
         var playerChoice = selections.find(s => {
             return s.id === 3
         });
-        var cpuChoiceId = randomNo(1, 1);
+        var cpuChoiceId = randomNo(1, 5);
         cpuChoice = selections.find(s => {
             return s.id === cpuChoiceId
         });
@@ -466,4 +488,14 @@ function userNameBanner(){
         document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;
     }
     h1.classList.add('bannerwithname');
+}
+function chooseMoreWisely(){
+    if (numberClicks === 1){
+        document.getElementById('wisely-ier').innerHTML = 'Choose more wisely-ier'
+    } 
+}
+function chooseMoreWiselyAgain(){
+    if (numberClicks === 2 && loseCounter === 2){
+        document.getElementById('wisely-ier').innerHTML = 'Choose even more wisely-ier still'
+    } 
 }
