@@ -62,7 +62,11 @@
             <div>
                 <div id="username">
                     <p>
-                        Player 1<form id="myForm" onsubmit="return false;"><input type="text" id="commentarea" name="player 1" placeholder="Enter your name, mortal!" onclick="validateForm()"></form>
+                        Player 1
+                        <form id="player-name-form">
+                            <input type="text" name="nickname" placeholder="Your name, mortal!" id="player-name">
+                            <input type="button" name="submit" onclick="onSubmit()" value="submit">
+                        </form>
                     </p>
                 </div>
                 <div id="putformhere"></div>
@@ -114,6 +118,9 @@
                     of the <em>CPU</em></strong>
             </p>
             <h2>Choose wisely</h2>
+        </div>
+        <div>
+            <img src="assets/images/howtoplay.png" alt="game-instructions">
         </div>
     </section>
     <!--Beginning of Footer, to include whatever appropriate to footers-->

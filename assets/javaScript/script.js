@@ -403,6 +403,10 @@ function actionwordsPaper() {
  var nameSubmission = document.getElementById('username');
  var putformhere = document.getElementById('putformhere');
 
+ function onSubmit() {
+    var playerName = document.getElementById('player-name').value;
+    console.log(playerName);
+ }
  //nameSubmission.addEventListener('click', function() {
     //nameSubmission.innerHTML = '';
     //putformhere.innerHTML = '<form id="myForm"><input type="text" id="commentarea" name="player 1" placeholder="Enter your name, mortal!" onsubmit="validateForm()"></form>';
@@ -412,11 +416,15 @@ function actionwordsPaper() {
        // }
    // })
 //})
-function validateForm() {
-    var input = document.getElementById("userInput");
-    alert(input);
-    console.log(input);
-    }
+// function conor() {
+//     var oisin = document.getElementById('myForm').value;
+//     console.log(oisin);
+// }
+// function validateForm() {
+//     var input = document.getElementById("userInput");
+//     alert(input);
+//     console.log(input);
+//     }
     // var x = document.forms['myForm'].value;
     // if (x == "") {
     //   alert("Name must be filled out");

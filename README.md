@@ -83,6 +83,8 @@
 - This was part of the issue and to circumvent it, one div has a click event
 - which changes a different div below that has no event listener.
 
+- Trying to create a form that saves its input to a var. After countless attempts
+- I've found the correct method. Documented below.
 
 ## Credits and Sources
 - StackOverflow. An example of random selection: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript 
