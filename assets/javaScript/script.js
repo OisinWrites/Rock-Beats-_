@@ -456,7 +456,7 @@ function onSubmit() {
     putformhere.innerHTML = "";
     titleGenerator();
     //not yet working
-    if (playerName === undefined){
+    if (playerName === ""){
         putplayernamehere.innerHTML = 'Numbskull' + randomTitle;
     }
     //
