@@ -4,31 +4,31 @@ var winCounter = 0;
 var tiesCounter = 0;
 var loseCounter = 0;
 var numberClicks = 0;
-const body = document.querySelector('body');
+const body = document.querySelector("body");
 const selections = [
     {
-        name: 'rock',
-        img: 'assets/images/rock.png',
+        name: "rock",
+        img: "assets/images/rock.png",
         id: 1,
     },
     {
-        name: 'paper',
-        img: 'assets/images/paper.png',
+        name: "paper",
+        img: "assets/images/paper.png",
         id: 2,
     },
     {
-        name: 'scissors',
-        img: 'assets/images/scissor.png',
+        name: "scissors",
+        img: "assets/images/scissor.png",
         id: 3,
     },
     {
-        name: 'lizard',
-        img: 'assets/images/lizard.png',
+        name: "lizard",
+        img: "assets/images/lizard.png",
         id: 4
     },
     {
-        name: 'spock',
-        img: 'assets/images/spock.png',
+        name: "spock",
+        img: "assets/images/spock.png",
         id: 5,
     },
 ];
@@ -39,9 +39,9 @@ const selections = [
 addEventListeners();
 //this function sends the current 'x'Counter value into the correct HTML location
 function countersToScreen() {
-    document.getElementById('playerscore').innerHTML=winCounter;
-    document.getElementById('ties').innerHTML=tiesCounter;
-    document.getElementById('cpuscore').innerHTML=loseCounter;
+    document.getElementById("playerscore").innerHTML=winCounter;
+    document.getElementById("ties").innerHTML=tiesCounter;
+    document.getElementById("cpuscore").innerHTML=loseCounter;
 }
 //this function is what records the choices made in our best of 3 game into the HTML,
 //which can be as many as 5 'fights', but aren't necessary to complete in 5 as 
