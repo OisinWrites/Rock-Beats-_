@@ -7,24 +7,24 @@
 
 # Features
 - The site will have interactive buttons that give the user feedback based on their choice.
+- ![Buttons](assets/readme-documentation/buttons.png)
 - The player will be able to play against the computer, which will be able to randomly select a choice.
-- The player will see a record of past moves, their current score, and best of 3 scores.
+- The player will see a record of past moves, their current scoreof best of 5.
 - The player should be able to enter their player name.
+- ![Form](assets/readme-documentation/submitname.png)
 - The site should replace the player name submission form with the players name, and an automated title.
 - Such as *Oisín, the Oblivious!*.
-- In the record of past moves the winning choice should appear more dominant.
+- ![Title after player name](assets/readme-documentation/randomtitle.png)
 - In the record of past moves the latest choices should appear at the top of the list.
+- ![Log chronological order](assets/readme-documentation/logorder.png) 
 - The record of past choices should reset after each best of three.
 - In the record of past moves the relationship between various choices should show.
--   Such as 'Rock' *smashes* 'Scissors'.
-- A seperate counter for rounds of 'Best of Three' should be included.
-- This second counter should itself be a best of three and upon completion result in a reset.
-- On final completion of the game the user should be greeted by a message based on performance.
-- If in any case the player loses to the computer by a choice of rock, the players name 
-- could appear in the banner, such as 'Rock Beats _' => 'Rock Beats Oisín'.
+-   Such as 'Rock' *crushes* 'Scissors'.
+- ![Verbs between Choices](assets/readme-documentation/actionwords.png)
+- If in any case the player loses to the computer by a choice of rock, the players name could appear in the banner, such as 'Rock Beats _' => 'Rock Beats Oisín'.
+- ![Rock beats You](assets/readme-documentation/bannername.png)
 - Choices that the computer ties against will have their own seperate counter.
-- Text displaying a win, loss, or tie should appear after each choice is made.
-- This could be followed by a congratulatory, commiserating, or encouraging message.
+- ![Tie Counter](assets/readme-documentation/tiescounter.png)
 
 ## Error log
 - Stylesheet having no effect on server output
@@ -99,11 +99,16 @@
 ## Testing
 
 ### HTML Validation
+- ![](assets/readme-documentation/html-validation.png)
 
 ### CSS Validation
-
+- ![](assets/readme-documentation/css-vaildation.png)
 ### javaScript Validation
-
-### Media Screen Mock-ups
-
+- ![](assets/readme-documentation/javascript-validation.png)
+### Media Screen Mock-ups for Responsivity
+- ![](assets/readme-documentation/screen-mockups.png)
+### Wave Accessibility Testing
+- ![](assets/readme-documentation/accessibility.png)
+### Lighthouse Performance Testing
+- ![](assets/readme-documentation/performance.png)
 ### Alternate Browser Testing
