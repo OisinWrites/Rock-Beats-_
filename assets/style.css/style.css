@@ -89,14 +89,15 @@ h2 {
     margin: .2rem;
    }
 .best {
-    font-size: 1rem;
+    text-decoration: overline underline;
+    font-size: 1.4rem;
     padding: 1rem;
     display: flex;
     justify-content: center;
     color:#15616D;
     margin-top: -3.5rem;
     max-width: 80vw;
-    margin-bottom: -2.5rem;
+    margin-bottom: -1.5rem;
 }
 @-webkit-keyframes question {
     0% {
@@ -117,8 +118,10 @@ h2 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    position:relative;
     margin-bottom: 1rem;
+}
+.buttonsbarrier {
+    padding-bottom: 0rem;
 }
 .button {
     height: auto;
@@ -146,7 +149,7 @@ h2 {
     padding:1rem;
 }
 .resetstyling {
-    font-size: 75%;
+    font-size: 2rem;
 }
 /*----styling for the game score counter area----*/
 .battlefield {
@@ -168,7 +171,7 @@ h2 {
     width: 20vw;
   }
 #vs {
-    font-size: 3rem;
+    font-size: 2rem;
 }
   /*----split----*/
 .players {
@@ -195,8 +198,6 @@ h2 {
   /*----split----*/
 .counter {
     margin-top: 2rem;
-    display:grid;
-    grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     align-items:center;
 }
@@ -204,6 +205,7 @@ h2 {
    display: flex;
    justify-content: center;
    white-space: nowrap;
+   padding: .4rem;
 }
 .logimgs {
     width: 8vw;
@@ -213,17 +215,6 @@ h2 {
     justify-content: center;
     font-size: 5rem;
     margin-bottom: -.5rem;
-}
-.record-choice {
-    opacity: .5;
-}
-.record-choice.ties {
-    opacity: .5;
-    font-size: .8rem;
-}
-.record-choice.winner {
-    opacity: 1;
-    font-size: 1.5rem;
 }
 .how-to {
     max-width: 85vw;
@@ -236,19 +227,30 @@ footer {
     text-align: center;
     font-size: 1rem;
     max-width: 100vw;
-    height: 6rem;
+    height: 4rem;
 }
 .footer {
     display: flex;
     justify-content: space-between;
     font-size: 2rem;
-    padding-right: 1.25rem;
-    padding-left: 2rem;
+    padding: 1rem;
 }
-.footanchor {
+.footanchors {
+    color:#FF7D00;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding:.4rem;
+    text-decoration: none;
+}
+.footparagraphs {
+    font-size:1rem;
+    color:#FF7D00;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding:.4rem;
+    text-decoration: none;
 }
 /*----media query first break point----*/
 @media screen and (min-width:320px) {
@@ -262,7 +264,23 @@ footer {
     }
     .innerdiv {
         font-size: 1.1rem;
-        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        color:#15616D;
+        margin-top:0rem;
+        max-width: 80vw;
+        margin-bottom: -.5rem;
+    }
+    .best {
+        text-decoration: overline underline;
+        font-size: 2rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        color:#15616D;
+        margin-top: -3.5rem;
+        max-width: 80vw;
+        margin-bottom: -.5rem;
     }
     .banner {
         font-size: 1.8rem;
@@ -316,8 +334,6 @@ footer {
     .banner {
         font-size: 2.8rem;
     }
-}
-@media screen and (min-width:1100px) {
     .battlefield {
         max-height: 20rem;
     }

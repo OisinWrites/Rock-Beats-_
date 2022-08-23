@@ -122,7 +122,7 @@ function resetButton() {
     loseCounter = 0;
     tiesCounter = 0;
     numberClicks = 0;
-    document.getElementById('actionword').innerHTML = "Best of Five";
+    document.getElementById('actionword').innerHTML = `<div class="best">Best of Five</div>`;
     document.getElementById('fight1').innerHTML = "";
     document.getElementById('fight2').innerHTML = "";
     document.getElementById('fight3').innerHTML = "";
