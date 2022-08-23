@@ -5,6 +5,29 @@
 - The site must be attractive and well laid out. 
 - It must have instruction on how the game is played, and a scoring system.
 
+# Design
+- Colour pallete
+    I saved this pallete while exploring the colour pallete generating site, "Coolers", and decided to
+    see how to apply it to this project. 
+    In terms of the significance of the colours, the darker navy is used to signify defeat,
+    and the lighter cream and orange, for victory.
+    This is implemented in the gradient background colour, 'good bearing down on the dark'.
+    The theme reoccurs on win and lose conditions. On a loss the steep gradient flashes unpleasantly and
+    the orange and navy are juxtaposed for their high contrast. On a win, the background is smooth, light
+    and bright, with an even gradient.
+-![Coolers Palette](assets/readme-documentation/colour-choice.png)
+
+- Layout
+    I opted to have the game at the top of the page and instructions at the bottom, and it is
+    an unpleasant user experience to have to scroll past the instructions for every play through, and because
+    the instructions are only necessary at most once, the game being largly intuitive and widely understood.
+    On larger screens, the game log of past moves is pushed up to the right of screen so that the use 
+    needn't scroll to scan the cpu's previous moves.
+
+- Typography
+    The font chosen is a retro pixelated style, which I believe gives the game something closer to an
+    arcade game feel. 
+    
 # Features
 - The site will have interactive buttons that give the user feedback based on their choice.
 - ![Buttons](assets/readme-documentation/buttons.png)
@@ -109,7 +132,6 @@
 
 ### HTML Validation
 - ![](assets/readme-documentation/html-validation.png)
-
 ### CSS Validation
 - ![](assets/readme-documentation/css-vaildation.png)
 ### javaScript Validation
