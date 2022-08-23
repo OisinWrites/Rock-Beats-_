@@ -34,14 +34,11 @@ header{
     max-width: 100vw;
     margin-top: -.75rem;
 }
-h1 {
+.banner {
     display: flex;
     justify-content:flex-start;
     margin-bottom: -.95rem;
     white-space: nowrap;
-}
-.bannerwithname {
-    font-size: 80%;
 }
 /*----styling for the navigation bar to sections---*/
 nav {

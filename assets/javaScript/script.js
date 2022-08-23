@@ -146,7 +146,6 @@ function resetButton() {
 </span>`;
     document.getElementById('reset-button').innerHTML = buttonSelections;
     addEventListeners()
-    document.getElementById('actionword').innerHTML = '';
     body.classList.remove('bodywin');
     body.classList.remove('bodylose');
 }
@@ -177,6 +176,7 @@ function determineWinRock() {
 }
 function determineWinPaper() {
     document.getElementById('banner').innerHTML = 'Rock Beats _';
+    h1.classList.add('banner');
     document.getElementById('wisely-ier').innerHTML = 'Choose Wisely';
     if(cpuChoice.id === 1 || cpuChoice.id === 5){
         winCounter ++;
@@ -438,6 +438,7 @@ var putplayernamehere = document.getElementById('putplayernamehere');
 var randomTitle;
 var titleNo = randomNo(1,10);
 var playerName;
+var banner = document.getElementById('banner');
 const playerDefeat = [
     {
     img: 'assets/images/defeat.png'
@@ -502,8 +503,8 @@ function userNameBanner(){
     }
     else {
         document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;
-    }
-    h1.classList.add('bannerwithname');
+    };
+    banner.classList.add('banner');
 }
 function chooseMoreWisely(){
     if (numberClicks === 1){
