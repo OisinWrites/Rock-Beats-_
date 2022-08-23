@@ -258,10 +258,13 @@ footer {
 }
 @media screen and (min-width: 470px) {
     .welcome {
-        font-size: 1.8rem;
+        font-size: 1.1rem;
     }
     .welcome2 {
         font-size: 1.6rem;
+    }
+    .how-to {
+        width:85vw
     }
 }
 @media screen and (min-width: 650px) {

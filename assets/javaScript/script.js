@@ -129,19 +129,19 @@ function resetButton() {
     document.getElementById('fight4').innerHTML = "";
     document.getElementById('fight5').innerHTML = "";
     document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/player.png">'
-    const buttonSelections = `<span class="choices" rockButton>
+    const buttonSelections = `<span class="choices" id="rockButton">
     <img class="button" src="assets/images/rock.png" alt="rock">
 </span>
-<span class="choices" paperButton>
+<span class="choices" id="paperButton">
     <img class="button" src="assets/images/paper.png" alt="paper">
 </span>
-<span class="choices" scissorsButton>
+<span class="choices" id="scissorsButton">
     <img class="button" src="assets/images/scissor.png"alt="scissors">
 </span>
-<span class="choices" lizardButton>
+<span class="choices" id="lizardButton">
     <img class="button" src="assets/images/lizard.png" alt="lizard">
 </span>
-<span class="choices" spockButton>
+<span class="choices" id="spockButton">
     <img class="button" src="assets/images/spock.png" alt="spock">
 </span>`;
     document.getElementById('reset-button').innerHTML = buttonSelections;
@@ -266,7 +266,7 @@ function randomNo(min, max) {
 //page the corresponding object and its arrays, so that each button can be associated with its RPSLS choice and image.
 //The click event calls on the other functions above.
 function addEventListeners() {
-    document.querySelector('[rockButton]').addEventListener('click', function(){
+    document.getElementById('rockButton').addEventListener('click', function(){
         numberClicks ++;
         var playerChoice = selections.find(s => {
             return s.id === 1
@@ -281,7 +281,7 @@ function addEventListeners() {
         imagesToLog(playerChoice, result, cpuChoice);
         actionwordsRock();
     })
-    document.querySelector('[paperButton]').addEventListener('click', function(){
+    document.getElementById('paperButton').addEventListener('click', function(){
         numberClicks ++;
         var playerChoice = selections.find(s => {
             return s.id === 2
@@ -296,7 +296,7 @@ function addEventListeners() {
         imagesToLog(playerChoice, result, cpuChoice);
         actionwordsPaper();
     })
-    document.querySelector('[scissorsButton]').addEventListener('click', function(){
+    document.getElementById('scissorsButton').addEventListener('click', function(){
         numberClicks ++;
         var playerChoice = selections.find(s => {
             return s.id === 3
@@ -311,7 +311,7 @@ function addEventListeners() {
         imagesToLog(playerChoice, result, cpuChoice);
         actionwordsScissors();
     })
-    document.querySelector('[lizardButton]').addEventListener('click', function(){
+    document.getElementById('lizardButton').addEventListener('click', function(){
         numberClicks ++;
         var playerChoice = selections.find(s => {
             return s.id === 4
@@ -326,7 +326,7 @@ function addEventListeners() {
         imagesToLog(playerChoice, result, cpuChoice);
         actionwordsLizard();
     })
-    document.querySelector('[spockButton]').addEventListener('click', function(){
+    document.getElementById('spockButton').addEventListener('click', function(){
         numberClicks ++;
         var playerChoice = selections.find(s => {
             return s.id === 5
@@ -452,14 +452,12 @@ nameSubmission.addEventListener('click', function() {
 })
 
 function onSubmit() {
-    playerName = document.getElementById('player-name').value;
+    playerName = document.getElementById('player-name').value.trim();
     putformhere.innerHTML = "";
     titleGenerator();
-    //not yet working
     if (playerName === ""){
         putplayernamehere.innerHTML = 'Numbskull' + randomTitle;
     }
-    //
     else {
         putplayernamehere.innerHTML = playerName + randomTitle;
     };
@@ -501,6 +499,9 @@ function userNameBanner(){
     if (playerName === undefined){
         document.getElementById('banner').innerHTML = 'Rock Beats You';
     }
+    // else if (playername === ""){
+    //     document.getElementById('banner').innerHTML = 'Rock Beats Numbskull';
+    // }
     else {
         document.getElementById('banner').innerHTML = 'Rock Beats ' + playerName;
     };
