@@ -36,10 +36,14 @@ header{
     margin-top: -.75rem;
 }
 .banner {
+    font-size: 1.2rem;
     display: flex;
     justify-content:flex-start;
-    margin-bottom: -.95rem;
+    margin-bottom: -.7rem;
     white-space: nowrap;
+    padding-top: .6rem;
+    padding-right: .6rem;
+    padding-left: .6rem;
 }
 /*----styling for the navigation bar to sections---*/
 nav {
@@ -48,13 +52,18 @@ nav {
     margin-bottom: -1rem;
 }
 .section-links {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
 }
-a { 
+.navanchors { 
+    text-decoration: none;
     color: #FF7D00;
     margin-right: 1rem;
+    font-size: .9rem;
+    margin-right: 1rem;
+}
+.rightanchor {
+    padding-right: 2rem;
 }
 ul {
     list-style: none;
@@ -255,13 +264,19 @@ footer {
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
+    .banner {
+        font-size: 1.8rem;
+    }
+    .navanchors {
+        font-size: 1.1rem;
+    }
 }
 @media screen and (min-width: 470px) {
     .welcome {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .welcome2 {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     .how-to {
         width:85vw
@@ -294,6 +309,12 @@ footer {
     }
     .logimgs {
         max-width: 5vw;
+    }
+    .navanchors {
+        font-size: 1.6rem;
+    }
+    .banner {
+        font-size: 2.8rem;
     }
 }
 @media screen and (min-width:1100px) {
