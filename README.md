@@ -27,7 +27,7 @@
 - Typography
     The font chosen is a retro pixelated style, which I believe gives the game something closer to an
     arcade game feel. 
-    
+
 # Features
 - The site will have interactive buttons that give the user feedback based on their choice.
 - ![Buttons](assets/readme-documentation/buttons.png)
@@ -134,14 +134,25 @@
 - ![](assets/readme-documentation/html-validation.png)
 ### CSS Validation
 - ![](assets/readme-documentation/css-vaildation.png)
+    CSS has a bit of a grievance with the -web-kit functionality employed by browsers, but all seems to be working,
+    and the validator didn't note it.
 ### javaScript Validation
 - ![](assets/readme-documentation/javascript-validation.png)
+    Hundreds of warnings in linter, but no errors left. A majority of these are single quote rather than
+    double quote infractions. As far as I understand, the warnings are not effecting the functionality of the code as is,
+    so I needn't address them for submission.
 ### Media Screen Mock-ups for Responsivity
 - ![](assets/readme-documentation/screen-mockups.png)
 ### Wave Accessibility Testing
 - ![](assets/readme-documentation/accessibility.png)
+    I am electing to keep my colour decisions in the navbar, which I feel are consistent in style, and reasonably legible.
+    For those with a vision impairment, the site would still be fully accessible as the use of the navigation links are not crucial.
+    Wave also highlighted 'no text in anchors' for the footer. Considering that they i) function correctly, without HTML error, 
+    ii) are styled adequately as are, and iii) both icons and text have each of the same links/functions, I will also be ignoring WAVE's suggestions.
 ### Lighthouse Performance Testing
 - ![](assets/readme-documentation/performance.png)
+- Note: Performance marker had been at 92% before addition of images for readme. Do images, not loaded into the page, 
+but that are only in the directory effect this rating?
 ### Alternate Browser Testing
 - Safari 
 - ![](assets/readme-documentation/safari-test-1.png)
