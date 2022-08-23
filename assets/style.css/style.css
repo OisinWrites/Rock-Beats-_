@@ -201,7 +201,7 @@ h2 {
 }
 .record {
     display:flex;
-    justify-content: center space-evenly;
+    justify-content: center;
     font-size: 5rem;
     margin-bottom: -.5rem;
 }
