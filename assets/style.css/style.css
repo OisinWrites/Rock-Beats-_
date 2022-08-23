@@ -297,12 +297,16 @@ footer {
         font-size: 1.2rem;
     }
     .how-to {
-        width:85vw
+        width:85vw;
     }
 }
 @media screen and (min-width: 650px) {
     .innerdiv {
         font-size: 1.8rem;
+    }
+    .how-to {
+        width: 34rem;
+        padding-bottom: 5rem;
     }
 }
 @media screen and (min-width: 930px) {
@@ -352,5 +356,14 @@ footer {
     }
     .part1 {
         margin-bottom: 15rem;
+    }
+    footer {
+        height:6rem;
+    }
+    .footanchors {
+        font-size: 4rem;
+    }
+    .footparagraphs {
+        font-size: 2rem;
     }
 }
