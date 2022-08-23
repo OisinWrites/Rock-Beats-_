@@ -30,98 +30,108 @@
         </nav>
     </header>
     <!--The Game, to include buttons, name submission form, score counter, choice history, rounds played-->
-    <section id="the-game">
-        <div class="battlefield">
-            <span name="player" id="defeat">
-                <img class="avatar stickman" src="assets/images/player.png">
-            </span>
-            <span name="vs">
-                <p id="vs">vs</p>
-            </span>
-            <span name="cpu">
-                <img class="avatar cpu" src="assets/images/computer.png">
-            </span>
-        </div>
-        <div class="innerdiv best" id="actionword">
-            Best of Five
-        </div>
-        
-        <div class="players">
-            <div class="scoreandname">
-                <span class="record" id="playerscore">
-                    0
+    <section class="parts" id="the-game">
+        <div class="part1">
+            <div class="battlefield">
+                <span name="player" id="defeat">
+                    <img class="avatar stickman" src="assets/images/player.png">
                 </span>
-                <div id="username">
-                    <p class="names" id="beforeform">
-                        who are you?
+                <span name="vs">
+                    <p id="vs">vs</p>
+                </span>
+                <span name="cpu">
+                    <img class="avatar cpu" src="assets/images/computer.png">
+                </span>
+            </div>
+            <div class="innerdiv best" id="actionword">
+                Best of Five
+            </div>
+            <div class="players">
+                <div class="scoreandname">
+                    <span class="record" id="playerscore">
+                        0
+                    </span>
+                    <div id="putformhere"></div>
+                    <div id="putplayernamehere" class="names"></div>
+                    <div id="username">
+                        <p class="putplayernamehere" id="beforeform">
+                            who are you?
+                        </p>
+                    </div>
+                </div>
+                <div class="scoreandname">
+                    <span class="record" id="ties">
+                        0
+                    </span>
+                    <p class="names ties">
+                        ties
                     </p>
                 </div>
-                <div id="putformhere"></div>
-                <div id="putplayernamehere"></div>
+                <div class="scoreandname">
+                    <span class="record" id="cpuscore">
+                        0
+                    </span>
+                    <p class="names">
+                        Cpu
+                    </p>
+                </div>        
             </div>
-            <div class="scoreandname">
-                <span class="record" id="ties">
-                    0
+            <div class="buttons" id="reset-button">
+                <span class="choices" rockButton>
+                    <img class="button" src="assets/images/rock.png" alt="rock">
                 </span>
-                <p class="names">
-                    ties
-                </p>
-            </div>
-            <div class="scoreandname">
-                <span class="record" id="cpuscore">
-                    0
+                <span class="choices" paperButton>
+                    <img class="button" src="assets/images/paper.png" alt="paper">
                 </span>
-                <p class="names">
-                    Cpu
-                </p>
-            </div>        
-        </div>
-        <div class="buttons" id="reset-button">
-            <span class="choices" rockButton>
-                <img class="button" src="assets/images/rock.png" alt="rock">
-            </span>
-            <span class="choices" paperButton>
-                <img class="button" src="assets/images/paper.png" alt="paper">
-            </span>
-            <span class="choices" scissorsButton>
-                <img class="button" src="assets/images/scissor.png"alt="scissors">
-            </span>
-            <span class="choices" lizardButton>
-                <img class="button" src="assets/images/lizard.png" alt="lizard">
-            </span>
-            <span class="choices" spockButton>
-                <img class="button" src="assets/images/spock.png" alt="spock">
-            </span>
-        </div>
-        <div class="buttonsbarrier"></div>
-        <div id="game-log" class="log">
-            <div class="innerdiv" id="fight5">
-            </div>
-            <div class="innerdiv" id="fight4">
-            </div>
-            <div class="innerdiv" id="fight3">
-            </div>
-            <div class="innerdiv" id="fight2">
-            </div>
-            <div class="innerdiv" id="fight1">
+                <span class="choices" scissorsButton>
+                    <img class="button" src="assets/images/scissor.png"alt="scissors">
+                </span>
+                <span class="choices" lizardButton>
+                    <img class="button" src="assets/images/lizard.png" alt="lizard">
+                </span>
+                <span class="choices" spockButton>
+                    <img class="button" src="assets/images/spock.png" alt="spock">
+                </span>
             </div>
         </div>
-        <!---<div class="record-choice"></div>
-        <div class="record-choice ties" ></div>
-        <div class="record-choice winner"></div>--->
+        <div class="part2">
+            <div class="buttonsbarrier"></div>
+            <div id="game-log" class="log">
+                <div class="innerdiv" id="fight5">
+                </div>
+                <div class="innerdiv" id="fight4">
+                </div>
+                <div class="innerdiv" id="fight3">
+                </div>
+                <div class="innerdiv" id="fight2">
+                </div>
+                <div class="innerdiv" id="fight1">
+                </div>
+            </div>
+        </div>
     </section>
     <!--How to Play, to include basic instructions, any interesting information about the game's origin-->
     <section id="how-to-play">
         <div class="welcome">
             <h2  id="wisely-ier">Choose wisely</h2>
-            <p class="how-to-play">
+            <p class="how-to-play welcome2">
                 <strong>Only with formidable intellect can you hope
                     to beat the thoughtlessly random selection
                     of the <em>CPU</em></strong>
             </p>
         </div>
-        <div>
-            <img  class="how-to" src="assets/images/howtoplay.png" alt="game-instructions">
+        <div class="welcome">
+            <h3>How it works</h3>
+            <p class="welcome2">
+                Each choice of either, rock, paper, scissors, lizard, spock, 
+                has both two options it will beat, and two that defeat it. 
+                Each choice will only tie against itself.
+                When you select an option from the buttons above, the computer
+                will pick a random option also. The game will determine a winner,
+                and list your previous moves as you progress through
+                a game of bests of five. Best of luck!
+            </p>
+            <img  class="how-to welcome" src="assets/images/howtoplay.png" alt="game-instructions">
         </div>
     </section>
     <!--Beginning of Footer, to include whatever appropriate to footers-->

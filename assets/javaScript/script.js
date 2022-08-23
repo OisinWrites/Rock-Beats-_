@@ -80,9 +80,9 @@ function imagesToLog(playerChoice, resultMessage, cpuChoice) {
 //When any of the conditions are met it will call on our resetButton function, and on
 //our countersToScreen function so that the reset to 0 counters will refresh.
 function gameEnd() {
-    const winReset = '<div id="resetButton" class="buttonreset">Congratulations</div><div class="buttonreset">reset</div>';
-    const tiesReset = '<div id="resetButton" class="buttonreset">Try Again</div><div class="buttonreset">reset</div>';
-    const loseReset = '<div id="resetButton" class="buttonreset">You Fool</div><div class="buttonreset">reset</div>';
+    const winReset = '<div id="resetButton" class="buttonreset">*Congratulations!!*<br><p class="resetstyling">reset</p></div>';
+    const tiesReset = '<div id="resetButton" class="buttonreset">Try Again<br><p class="resetstyling">reset</p></div>';
+    const loseReset = '<div id="resetButton" class="buttonreset">You Ambitious Fool!<br><p class="resetstyling">reset</p></div>';
     if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
         if(winCounter > loseCounter) {
             document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/victory.png">';
@@ -484,7 +484,7 @@ function titleGenerator() {
         randomTitle = ', the Quick-Handed'
     }
     else if (titleNo === 7){
-        randomTitle = ', "the long lived, and prosperous"'
+        randomTitle = ', "the long-lived, and prosperous"'
     }
     else if (titleNo === 8){
         randomTitle = ', the "not particularly busy"'
