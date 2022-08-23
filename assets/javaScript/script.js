@@ -448,7 +448,7 @@ const  h1 = document.querySelector('h1');
 
 nameSubmission.addEventListener('click', function() {
     nameSubmission.innerHTML = '';
-    putformhere.innerHTML = '<form id="player-name-form"><input type="text" name="nickname" placeholder="Your name, mortal!" id="player-name"><input type="button" name="submit" onclick="onSubmit()" value="submit"></form>';
+    putformhere.innerHTML = 'form id="player-name-form"*input type="text" name="nickname" placeholder="Your name, mortal!" id="player-name"*input type="button" name="submit" onclick="onSubmit()" value="submit"**/form';
 })
 
 function onSubmit() {
