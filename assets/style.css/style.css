@@ -227,7 +227,7 @@ footer {
     text-align: center;
     font-size: 1rem;
     max-width: 100vw;
-    height: 3rem;
+    height: 6rem;
 }
 .footer {
     display: flex;
@@ -235,6 +235,11 @@ footer {
     font-size: 2rem;
     padding-right: 1.25rem;
     padding-left: 2rem;
+}
+.footanchor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 /*----media query first break point----*/
 @media screen and (min-width:320px) {
