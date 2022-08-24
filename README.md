@@ -160,6 +160,8 @@
 - ![](assets/readme-documentation/performance.jpg)
 - Note: Performance marker had been at 92% before addition of images for readme. Do images, not loaded into the page, 
 but that are only in the directory effect this rating?
+- Improved performance after swapping readme images from .png to .jpeg and compressing .pngs for game. However, I should have also compressed the .jpgs.
+- ![](assets/readme-documentation/performancenew.jpg)
 ### Alternate Browser Testing
 - Safari 
 - ![](assets/readme-documentation/safari-test-1.jpg)
