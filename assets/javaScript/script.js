@@ -80,9 +80,9 @@ function imagesToLog(playerChoice, resultMessage, cpuChoice) {
 //When any of the conditions are met it will call on our resetButton function, and on
 //our countersToScreen function so that the reset to 0 counters will refresh.
 function gameEnd() {
-    const winReset = '<div class="reset"><div id="resetButton" class="buttonresetcongrat">*Congratulations!!*</div><div class="buttonresetcongrat resetstyling">reset</div></div>';
-    const tiesReset = '<div class="reset"><div id="resetButton" class="buttonresettry">Try Again</div><div class="buttonresettry resetstyling">reset</div></div>';
-    const loseReset = '<div class="reset"><div id="resetButton" class="buttonresetfail">You Ambitious Fool!</div><div class="buttonresetfail resetstyling">reset</div></div>';
+    const winReset = '<div class="reset" id="resetButton"><div class="buttonresetcongrat">*Congratulations!!*</div><div class="buttonresetcongrat resetstyling">reset</div></div>';
+    const tiesReset = '<div class="reset" id="resetButton"><div class="buttonresettry">Try Again</div><div class="buttonresettry resetstyling">reset</div></div>';
+    const loseReset = '<div class="reset" id="resetButton"><div class="buttonresetfail">You Ambitious Fool!</div><div class="buttonresetfail resetstyling">reset</div></div>';
     if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
         if(winCounter > loseCounter) {
             document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/victory.png">';

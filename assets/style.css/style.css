@@ -95,7 +95,7 @@ h2 {
     display: flex;
     justify-content: center;
     color:#15616D;
-    margin-top: -3.5rem;
+    margin-top: -1rem;
     max-width: 80vw;
     margin-bottom: -1.5rem;
 }
@@ -207,6 +207,10 @@ h2 {
     justify-content: space-around;
     font-size: 1.5rem;
     align-content: flex-start;
+}
+.ties {
+    font-size: 1rem;
+    padding-top: 5%;
 }
 #putplayernamehere {
     font-size: 1rem;
