@@ -15,7 +15,7 @@
     The theme reoccurs on win and lose conditions. On a loss the steep gradient flashes unpleasantly and
     the orange and navy are juxtaposed for their high contrast. On a win, the background is smooth, light
     and bright, with an even gradient.
--![Coolers Palette](assets/readme-documentation/colour-choice.png)
+-![Coolers Palette](assets/readme-documentation/colour-choice.jpg)
 
 - Layout
     I opted to have the game at the top of the page and instructions at the bottom, and it is
@@ -30,27 +30,27 @@
 
 # Features
 - The site will have interactive buttons that give the user feedback based on their choice.
-- ![Buttons](assets/readme-documentation/buttons.png)
+- ![Buttons](assets/readme-documentation/buttons.jpg)
 - The player will be able to play against the computer, which will be able to randomly select a choice.
 - The player will see a record of past moves, their current score of best of 5.
 - The player should be able to enter their player name.
-- ![Form](assets/readme-documentation/submitname.png)
+- ![Form](assets/readme-documentation/submitname.jpg)
 - The site should replace the player name submission form with the players name, and an automated title.
 - Such as *Oisín, the Oblivious!*.
-- ![Title after player name](assets/readme-documentation/randomtitle.png)
+- ![Title after player name](assets/readme-documentation/randomtitle.jpg)
 - In the record of past moves the latest choices should appear at the top of the list.
-- ![Log chronological order](assets/readme-documentation/logorder.png) 
+- ![Log chronological order](assets/readme-documentation/logorder.jpg) 
 - The record of past choices should reset after each best of three.
 - In the record of past moves the relationship between various choices should show.
 -   Such as 'Rock' *crushes* 'Scissors'.
-- ![Verbs between Choices](assets/readme-documentation/actionwords.png)
+- ![Verbs between Choices](assets/readme-documentation/actionwords.jpg)
 - If in any case the player loses to the computer by a choice of rock, the players name could appear in the banner, such as 'Rock Beats _' => 'Rock Beats Oisín'.
-- ![Rock beats You](assets/readme-documentation/bannername.png)
+- ![Rock beats You](assets/readme-documentation/bannername.jpg)
 - Choices that the computer ties against will have their own seperate counter.
-- ![Tie Counter](assets/readme-documentation/tiescounter.png)
+- ![Tie Counter](assets/readme-documentation/tiescounter.jpg)
 - Stickman avatar changes to a tombstone or a hero depending on win or lose, and reverts back on reset button click.
-- ![Defeat Avatar](assets/readme-documentation/defeat-avatar.png)
-- ![Hero Avatar](assets/readme-documentation/hero-avatar.png)
+- ![Defeat Avatar](assets/readme-documentation/defeat-avatar.jpg)
+- ![Hero Avatar](assets/readme-documentation/hero-avatar.jpg)
 ## Error log
 - Stylesheet having no effect on server output
     Recreated stylesheet, rewrote link, rewrote ids in css.
@@ -131,36 +131,36 @@
 ## Testing
 
 ### HTML Validation
-- ![](assets/readme-documentation/html-validation.png)
+- ![](assets/readme-documentation/html-validation.jpg)
 ### CSS Validation
-- ![](assets/readme-documentation/css-vaildation.png)
+- ![](assets/readme-documentation/css-vaildation.jpg)
     CSS has a bit of a grievance with the -web-kit functionality employed by browsers, but all seems to be working,
     and the validator didn't note it.
 ### javaScript Validation
-- ![](assets/readme-documentation/javascript-validation.png)
+- ![](assets/readme-documentation/javascript-validation.jpg)
     Hundreds of warnings in linter, but no errors left. A majority of these are single quote rather than
     double quote infractions. As far as I understand, the warnings are not effecting the functionality of the code as is,
     so I needn't address them for submission.
 ### Media Screen Mock-ups for Responsivity
-- ![](assets/readme-documentation/screen-mockups.png)
+- ![](assets/readme-documentation/screen-mockups.jpg)
 ### Wave Accessibility Testing
-- ![](assets/readme-documentation/accessibility.png)
+- ![](assets/readme-documentation/accessibility.jpg)
     I am electing to keep my colour decisions in the navbar, which I feel are consistent in style, and reasonably legible.
     For those with a vision impairment, the site would still be fully accessible as the use of the navigation links are not crucial.
     Wave also highlighted 'no text in anchors' for the footer. Considering that they i) function correctly, without HTML error, 
     ii) are styled adequately as are, and iii) both icons and text have each of the same links/functions, I will also be ignoring WAVE's suggestions.
 ### Lighthouse Performance Testing
-- ![](assets/readme-documentation/performance.png)
+- ![](assets/readme-documentation/performance.jpg)
 - Note: Performance marker had been at 92% before addition of images for readme. Do images, not loaded into the page, 
 but that are only in the directory effect this rating?
 ### Alternate Browser Testing
 - Safari 
-- ![](assets/readme-documentation/safari-test-1.png)
-- ![](assets/readme-documentation/safari-test-2.png)
+- ![](assets/readme-documentation/safari-test-1.jpg)
+- ![](assets/readme-documentation/safari-test-2.jpg)
 
 - Firefox
-- ![](assets/readme-documentation/firefox-test-1.png)
-- ![](assets/readme-documentation/firefox-test-2.png)
+- ![](assets/readme-documentation/firefox-test-1.jpg)
+- ![](assets/readme-documentation/firefox-test-2.jpg)
 
 - Chrome
     Website was tested from beinning to end using chrome
