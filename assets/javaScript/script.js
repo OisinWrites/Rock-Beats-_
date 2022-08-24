@@ -487,7 +487,7 @@ function titleGenerator() {
         randomTitle = ', the Oblivious'
     }
     else if (titleNo === 2){
-        randomTitle = ', the Undecided!'
+        randomTitle = ', the Undecided?'
     }
     else if (titleNo === 3){
         randomTitle = ', the Bored...'
@@ -502,16 +502,16 @@ function titleGenerator() {
         randomTitle = ', the Quick-Handed'
     }
     else if (titleNo === 7){
-        randomTitle = ', "the long-lived, and prosperous"'
+        randomTitle = ', the Prosperous'
     }
     else if (titleNo === 8){
-        randomTitle = ', the "not particularly busy"'
+        randomTitle = ', the not busy'
     }
     else if (titleNo === 9){
-        randomTitle = ', "I wouldnt normally leave anything to chance" O Brien '
+        randomTitle = ', the long lived'
     }
     else if (titleNo === 10){
-        randomTitle = ', lady lucks Swindler'
+        randomTitle = ", lady luck's Swindler"
     }
 }
 
