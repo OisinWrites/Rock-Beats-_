@@ -83,7 +83,27 @@ function gameEnd() {
     const winReset = '<div class="reset" id="resetButton"><div class="buttonresetcongrat">*Congratulations!!*</div><div class="buttonresetcongrat resetstyling">reset</div></div>';
     const tiesReset = '<div class="reset" id="resetButton"><div class="buttonresettry">Try Again</div><div class="buttonresettry resetstyling">reset</div></div>';
     const loseReset = '<div class="reset" id="resetButton"><div class="buttonresetfail">You Ambitious Fool!</div><div class="buttonresetfail resetstyling">reset</div></div>';
-    if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
+    if (winCounter === 2 && tiesCounter === 2){
+        document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/victory.png">';
+            document.getElementById('reset-button').innerHTML = winReset;
+            document.getElementById('resetButton').addEventListener('click', function(){
+                    resetButton();
+                    countersToScreen();
+                }
+            );
+            body.classList.add('bodywin');
+    }
+    else if (loseCounter === 2 && tiesCounter === 2){
+        document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/defeat.png">';
+            document.getElementById('reset-button').innerHTML = loseReset;
+            document.getElementById('resetButton').addEventListener('click', function() {
+                    resetButton();
+                    countersToScreen();
+                }
+            );
+            body.classList.add('bodylose');
+    }
+    else if(winCounter === 3 || loseCounter === 3 || numberClicks === 5){
         if(winCounter > loseCounter) {
             document.getElementById('defeat').innerHTML = '<img class="avatar stickman" src="assets/images/victory.png">';
             document.getElementById('reset-button').innerHTML = winReset;
