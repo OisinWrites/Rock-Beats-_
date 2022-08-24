@@ -88,6 +88,15 @@ h2 {
     max-width: 85vw;
     margin: .2rem;
    }
+.bestaction {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    padding: .4rem;
+    color:#15616D;
+    margin-bottom: -1.5rem;
+    margin-top: -3rem;
+ }
 .best {
     text-decoration: overline underline;
     font-size: 1.4rem;
@@ -95,9 +104,7 @@ h2 {
     display: flex;
     justify-content: center;
     color:#15616D;
-    margin-top: -1rem;
     max-width: 80vw;
-    margin-bottom: -1.5rem;
 }
 @-webkit-keyframes question {
     0% {
