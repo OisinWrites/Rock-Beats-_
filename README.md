@@ -1,13 +1,13 @@
 # Purpose of Site
-- This site is place to play a version of the Rock, Paper, Scissors game
+- This site is a place to play a version of the Rock, Paper, Scissors game.
 - It is expanded to include the variables of Lizard and Spock, created and popularised by
 - the sitcom 'The Big Bang Theory'.
 - The site must be attractive and well laid out. 
 - It must have instruction on how the game is played, and a scoring system.
 
 # Design
-- Colour pallete
-    I saved this pallete while exploring the colour pallete generating site, "Coolers", and decided to
+- Colour pallete:
+-   I saved this pallete while exploring the colour pallete generating site, "Coolers", and decided to
     see how to apply it to this project. 
     In terms of the significance of the colours, the darker navy is used to signify defeat,
     and the lighter cream and orange, for victory.
@@ -17,15 +17,15 @@
     and bright, with an even gradient.
 -![Coolers Palette](assets/readme-documentation/colour-choice.jpg)
 
-- Layout
-    I opted to have the game at the top of the page and instructions at the bottom, and it is
+- Layout:
+-   I opted to have the game at the top of the page and instructions at the bottom, and it is
     an unpleasant user experience to have to scroll past the instructions for every play through, and because
     the instructions are only necessary at most once, the game being largly intuitive and widely understood.
     On larger screens, the game log of past moves is pushed up to the right of screen so that the use 
     needn't scroll to scan the cpu's previous moves.
 
-- Typography
-    The font chosen is a retro pixelated style, which I believe gives the game something closer to an
+- Typography:
+-   The font chosen is a retro pixelated style, which I believe gives the game something closer to an
     arcade game feel. 
 
 # Features
@@ -119,8 +119,15 @@
     Fixed now.
 
 ### Errors Remaining
-- input form for player name is too long and needs to be shortened, I believe it can
-- be achieved with bootstrap. It is being left as is for submission.`
+- Input form for player name is too long and needs to be shortened, I believe it can be achieved with bootstrap. It is being left as is for submission.`
+- Player name, ties, and CPU text are not sufficiently styled to be in line with eachother.
+- After fix button selection, when the actionword div replaces the best of five div, the buttons jump position. On pc this can cause an unintentional drag and highlight action by the user.
+
+### Future plans for the site
+- The 'Face the Computer' navigation link is a little lack-luster and without significant functionality as it only drops the users screen beneath itself. (I kept it to fit the theme of the cpu being enemity, offering the player time to 'prepare' or if they were ready to 'face the computer'). I would make this function more impactful, such as disappearing the whole first section behind a 'Start Game' button that the 'Face the Computer' nav link also activated.
+- I would like to add in a timing function between player choice selection and both the action relationship div and past moves div that reveal the cpu's choice. The timing would be a "1, 2, and on 3" count, to emulate the classic playing of the game "Rock, Paper, Scissors", where players shake their hand in a fist on the rock and paper count, declaring their move on the scissors count.
+- I would like to add in retro feeling, 8-bit, music, with a mute toggle in the banner, that plays throughout the game, but also includes timed sound effects for the 3 punch countdown, a win, loss or tie.
+- I would like to arrange the player selections in a circle, and animate the opposing selections accordingly, and have the score counter in the middle of the circle so that the entire game existed with that cicurlar space.
 
 
 ## Credits and Sources
